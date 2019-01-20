@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\VideoData;
 use App\VideoStatus;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use League\Flysystem\Config;
 use function MongoDB\BSON\toJSON;
@@ -18,20 +20,33 @@ class UserController extends Controller
 
         \Stripe\Stripe::setApiKey( env('STRIPE_SECRET'));
 
-      // return $request;
+
 
 
         //return $request;
 
         $charge= \Stripe\Charge::create(array(
-            "amount"=>2000,
+            "amount"=>$request->amount,
+
             "currency"=>"USD",
-           "card"=> $request->id,
+
+           "card"=> $request->stripeToken,
             "description"=>"eCertify Realestate"
         ));
 
 
-        return $charge;
+
+        $user = User::find(Auth::user()->id);
+
+        $user->account_status = true;
+
+        $user->save();
+
+
+
+
+
+        return redirect()->back()->withFlashMessage('Account Activated');
     }
 
     public function getVideoStatus(Request $request){
