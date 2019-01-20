@@ -27,6 +27,7 @@ Route::post('/admin/coupons/get','AdminController@getDiscount');
 Route::get('/admin/users/list','AdminController@getUsers');
 Route::post('/admin/users/activate','AdminController@activateUsers');
 Route::post('/admin/users/suspend','AdminController@suspendUsers');
+Route::post('/admin/users/delete','AdminController@deleteUsers');
 
 
 Route::post('/users/video/status','UserController@getVideoStatus');

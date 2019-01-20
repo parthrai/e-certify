@@ -23,6 +23,8 @@
 
                                 <th @click="sort('email')">license </th>
                                 <th>Registration Date </th>
+                                <th>Registered </th>
+
                                 <th @click="sort('email')">Status </th>
 
                                 <th class="text-right">Actions</th>
@@ -33,13 +35,15 @@
 
 
                                 <td class="text-center">{{user.id}}</td>
-                                <td ><img src="https://www.pngarts.com/files/3/Avatar-PNG-Photo.png" height="70" width="70"/></td>
+                                <td ><img src="https://www.pngarts.com/files/3/Avatar-PNG-Photo.png" height="50" width="50"/></td>
 
                                 <td>{{user.name}}</td>
                                 <td>{{user.email}}</td>
                                 <td>{{user.phone}}</td>
                                 <td>{{user.license}}</td>
-                                <td>{{user.created_at}}</td>
+                                <td>{{user.created_at.date}}</td>
+
+                                <td>{{user.created_at_human}}</td>
 
                                 <td>
                                     <span v-if="user.account_status==1">
@@ -60,6 +64,9 @@
                                     <button type="button" rel="tooltip" class="btn btn-success" v-else @click="activateUser(user.id)">
                                         Activate
                                     </button>
+
+
+                                    <button class="btn btn-danger" @click="deleteUsers(user.id)">Delete</button>
 
 
                                 </td>
@@ -203,6 +210,35 @@
                 });
 
             });
+
+
+            },
+
+
+
+            deleteUsers(user_id){
+
+                let user ={
+                    id : user_id
+                }
+
+
+
+                console.log("the user is id " + user_id);
+
+                axios.post('/api/admin/users/delete',user).then(response => {
+
+                    console.log(response.data);
+                this.fetchUsers();
+                this.$notify({
+                    group: 'foo',
+                    type:'warn',
+                    title: 'Important message',
+                    text: 'User Deleted! '
+                });
+
+            });
+
 
 
             }

@@ -2153,6 +2153,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2259,6 +2266,26 @@ __webpack_require__.r(__webpack_exports__);
           type: 'warn',
           title: 'Important message',
           text: 'User Suspended! '
+        });
+      });
+    },
+    deleteUsers: function deleteUsers(user_id) {
+      var _this6 = this;
+
+      var user = {
+        id: user_id
+      };
+      console.log("the user is id " + user_id);
+      axios.post('/api/admin/users/delete', user).then(function (response) {
+        console.log(response.data);
+
+        _this6.fetchUsers();
+
+        _this6.$notify({
+          group: 'foo',
+          type: 'warn',
+          title: 'Important message',
+          text: 'User Deleted! '
         });
       });
     }
@@ -67014,6 +67041,8 @@ var render = function() {
                         _vm._v(" "),
                         _c("th", [_vm._v("Registration Date ")]),
                         _vm._v(" "),
+                        _c("th", [_vm._v("Registered ")]),
+                        _vm._v(" "),
                         _c(
                           "th",
                           {
@@ -67053,7 +67082,9 @@ var render = function() {
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(user.license))]),
                           _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(user.created_at))]),
+                          _c("td", [_vm._v(_vm._s(user.created_at.date))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(user.created_at_human))]),
                           _vm._v(" "),
                           _c("td", [
                             user.account_status == 1
@@ -67104,7 +67135,20 @@ var render = function() {
                                       "\n                                    Activate\n                                "
                                     )
                                   ]
-                                )
+                                ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger",
+                                on: {
+                                  click: function($event) {
+                                    _vm.deleteUsers(user.id)
+                                  }
+                                }
+                              },
+                              [_vm._v("Delete")]
+                            )
                           ])
                         ])
                       }),
@@ -67157,8 +67201,8 @@ var staticRenderFns = [
       _c("img", {
         attrs: {
           src: "https://www.pngarts.com/files/3/Avatar-PNG-Photo.png",
-          height: "70",
-          width: "70"
+          height: "50",
+          width: "50"
         }
       })
     ])

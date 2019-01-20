@@ -21,10 +21,31 @@ class AdminController extends Controller
 
     public function getUsers(){
 
-        $list_users= User::all();
+        $list_users= User::where('is_admin',false)->get();
+
+        $dataArray=[];
 
 
-        return $list_users;
+        foreach($list_users as $r){
+
+            $dataArray[]=array(
+                'id'=>$r->id,
+                'name'=>$r->name,
+                'email'=>$r->email,
+                'license'=>$r->license,
+                'phone'=>$r->phone,
+                'created_at'=>$r->created_at,
+                'created_at_human'=>$r->created_at->diffForHumans()
+
+
+            );
+        }
+
+
+
+
+
+        return $dataArray;
 
     }
 
@@ -52,7 +73,15 @@ class AdminController extends Controller
     }
 
 
+    public function deleteUsers(Request $request){
 
+        $id = $request->id;
+
+        $user = User::destroy($id);
+
+
+        return "success!";
+    }
 
 
 
