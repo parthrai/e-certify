@@ -32,6 +32,7 @@ class AdminController extends Controller
                 'id'=>$r->id,
                 'name'=>$r->name,
                 'email'=>$r->email,
+                'account_status' => $r->account_status,
                 'license'=>$r->license,
                 'phone'=>$r->phone,
                 'created_at'=>$r->created_at,

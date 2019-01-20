@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f08f739c-7c63-44de-94f7-52c0228441d5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/stripe.blade.php" afterPath="$PROJECT_DIR$/resources/views/users/stripe.blade.php" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
@@ -62,21 +61,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state relative-caret-position="478">
+              <caret line="34" column="55" lean-forward="false" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
               <folding>
-                <element signature="e#287#825#0#PHP" expanded="false" />
-                <element signature="e#831#1038#0#PHP" expanded="false" />
-                <element signature="e#1414#1485#0#PHP" expanded="false" />
-                <element signature="e#1491#1590#0#PHP" expanded="false" />
-                <element signature="e#1596#1878#0#PHP" expanded="false" />
-                <element signature="e#1884#2039#0#PHP" expanded="false" />
-                <element signature="e#2045#2220#0#PHP" expanded="false" />
-                <element signature="e#2229#3126#0#PHP" expanded="false" />
-                <element signature="e#3133#4159#0#PHP" expanded="false" />
+                <element signature="e#887#1094#0#PHP" expanded="false" />
+                <element signature="e#1470#1541#0#PHP" expanded="false" />
+                <element signature="e#1547#1646#0#PHP" expanded="false" />
+                <element signature="e#1652#1934#0#PHP" expanded="false" />
+                <element signature="e#1940#2095#0#PHP" expanded="false" />
+                <element signature="e#2101#2276#0#PHP" expanded="false" />
+                <element signature="e#2285#3182#0#PHP" expanded="false" />
+                <element signature="e#3189#4215#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -95,8 +93,8 @@
       <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="48" column="73" lean-forward="false" selection-start-line="48" selection-start-column="73" selection-end-line="48" selection-end-column="73" />
+            <state relative-caret-position="550">
+              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
                 <element signature="e#40#53#0#PHP" expanded="true" />
                 <element signature="e#900#1100#0#PHP" expanded="false" />
@@ -175,9 +173,9 @@
         <option value="$PROJECT_DIR$/resources/js/components/users/stripe.vue" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/routes/api.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/resources/js/components/admin/users.vue" />
         <option value="$PROJECT_DIR$/resources/views/users/stripe.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
       </list>
     </option>
   </component>
@@ -410,12 +408,12 @@
       <workItem from="1547664716028" duration="3799000" />
       <workItem from="1547927634274" duration="14025000" />
       <workItem from="1547999611288" duration="5293000" />
-      <workItem from="1548015846318" duration="17000" />
+      <workItem from="1548015846318" duration="613000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83571000" />
+    <option name="totallyTimeSpent" value="84167000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -457,7 +455,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php</url>
-          <line>140</line>
+          <line>141</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -795,36 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="48" column="73" lean-forward="false" selection-start-line="48" selection-start-column="73" selection-end-line="48" selection-end-column="73" />
-          <folding>
-            <element signature="e#40#53#0#PHP" expanded="true" />
-            <element signature="e#900#1100#0#PHP" expanded="false" />
-            <element signature="e#1107#1378#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding>
-            <element signature="e#287#825#0#PHP" expanded="false" />
-            <element signature="e#831#1038#0#PHP" expanded="false" />
-            <element signature="e#1414#1485#0#PHP" expanded="false" />
-            <element signature="e#1491#1590#0#PHP" expanded="false" />
-            <element signature="e#1596#1878#0#PHP" expanded="false" />
-            <element signature="e#1884#2039#0#PHP" expanded="false" />
-            <element signature="e#2045#2220#0#PHP" expanded="false" />
-            <element signature="e#2229#3126#0#PHP" expanded="false" />
-            <element signature="e#3133#4159#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/admin/users.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1734">
@@ -870,6 +838,35 @@
         <state relative-caret-position="312">
           <caret line="35" column="22" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#53#0#PHP" expanded="true" />
+            <element signature="e#900#1100#0#PHP" expanded="false" />
+            <element signature="e#1107#1378#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="34" column="55" lean-forward="false" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
+          <folding>
+            <element signature="e#887#1094#0#PHP" expanded="false" />
+            <element signature="e#1470#1541#0#PHP" expanded="false" />
+            <element signature="e#1547#1646#0#PHP" expanded="false" />
+            <element signature="e#1652#1934#0#PHP" expanded="false" />
+            <element signature="e#1940#2095#0#PHP" expanded="false" />
+            <element signature="e#2101#2276#0#PHP" expanded="false" />
+            <element signature="e#2285#3182#0#PHP" expanded="false" />
+            <element signature="e#3189#4215#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
