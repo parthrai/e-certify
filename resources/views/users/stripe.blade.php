@@ -152,7 +152,7 @@
 
                 </div>
                 <div class="modal-body">
-                    <form action="/pay" method="POST" id="payment-form" class="checkout">
+                    <form action="/user/pay" method="POST" id="payment-form" class="checkout">
                         {{csrf_field()}}
                         <span class="payment-errors"></span>
                         <div class="checkout-header">
