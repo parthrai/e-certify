@@ -75,6 +75,22 @@ class UserController extends Controller
     }
 
 
+    public function contactSupport(){
+        $title=$_POST['email'];
+        $msg=$_POST['message'];
+
+        Mail::send('emails/ContactSupport', ['msg' => $msg], function ($m) {
+            $m->from('support@ecertifyeducation.com', 'Support Request from:'.Auth::user()->email);
+
+            $m->to('support@ecertifyeducation.com', 'E-Certify Education')->subject('E-Certify Education');
+        });
+
+
+
+        return redirect()->back()->withFlashMessage('Message Sent');
+
+    }
+
 
     public function addNotes(Request $request){
 

@@ -196,6 +196,60 @@
 
     <!-- video modal -->
 
+    <!-- contact support modal -->
+
+    <div class="modal fade" id="contactsupportmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Contact Support</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form" method="post" action="/contactsupport">
+                        <input type="hidden" name="_token" value="<?= csrf_token();?>">
+
+
+                        <div class="form-group">
+                            <label for="title" class="white col-sm-2 control-label">Title</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Title" value="">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="white col-sm-2 control-label">Message</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" rows="4" name="message"></textarea>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <div class="col-sm-10 col-sm-offset-2">
+                                <! Will be used to display an alert to the user>
+                            </div>
+                        </div>
+                        <input id="submit" name="submit" type="submit" value="Send" class="btn btn-blue">
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-2">
+
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <!-- contact support modal -->
+
     <!-- certificate modal -->
 
 
@@ -286,6 +340,60 @@
 
     <!-- Notes Modal End-->
 
+
+    <!-- User guide --->
+
+    <div class="modal fade" id="helpguide" role="dialog">
+        <div class="modal_container">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class=".col-sm-12 modal-header">
+
+
+                        <h4 class=".col-sm-8 text-left modal-title">User Guide</h4>
+
+
+
+
+                    </div>
+                    <div class="modal-body">
+
+
+                        <p>1. After viewing each video, a checkmark will appear to register course credit.</p><Br>
+
+                        <p>2. Until the checkmark appears, you cannot fast forward the video (state required).</p><Br>
+
+                        <p>3. The video will prompt you to press the resume button at random intervals &nbsp;&nbsp;(state required).</p><Br>
+
+                        <p>4. When you leave a video, you will never lose your place.</p><Br>
+
+                        <p>5. Some out-of-date browsers like internet explorer may not save your place and have other performance issues. We recommend that you use Google Chrome.</p><Br>
+
+                        <p>6. To watch a video and all included power points, select video “Part 1” or “Part 2” on &nbsp;&nbsp; any module.</p><Br>
+
+                        <p>7. Selecting the red "PPT" symbol is only to download power points to view and print.</p><Br>
+
+                        <p>8. You have eight months (240 days) to complete the course or to re-watch the videos.</p><Br>
+
+                        <p>9. To view the course outlines, log out and click the intended course topic on the main &nbsp;&nbsp; menu.</p><Br>
+
+                        <p>10. Once you have completed all 12 videos, your certificate can be downloaded from the &nbsp;&nbsp; course menu.</p><Br>
+
+                        <p>11. After completing the videos, your certificate will automatically be sent to your &nbsp;&nbsp; email.</p><Br>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End user guid modal -->
 
     <!-- survey modal -->
 
