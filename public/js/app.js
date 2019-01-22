@@ -67705,9 +67705,7 @@ var render = function() {
           },
           ready: _vm.playerReadied
         }
-      }),
-      _vm._v(" "),
-      _c("h2", [_vm._v("time is = " + _vm._s(_vm.time))])
+      })
     ],
     1
   )

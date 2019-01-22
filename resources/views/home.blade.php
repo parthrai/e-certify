@@ -234,10 +234,58 @@
 
     <!-- Notes Modal -->
 
+    <div class="modal fade" id="notesmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Notes</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form" method="post" action="/user/savenotes">
+                        <input type="hidden" name="_token" value="<?= csrf_token();?>">
 
+
+
+
+                        <div class="form-group">
+                            <label for="message" class="white col-sm-2 control-label">Notes</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" rows="4" name="notes">{{Auth::user()->notes}}</textarea>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <div class="col-sm-10 col-sm-offset-2">
+                                <! Will be used to display an alert to the user>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <input id="submit" name="submit" type="submit" value="Save" class="btn btn-blue">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-2">
+
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
 
     <!-- Notes Modal End-->
+
 
     <!-- survey modal -->
 

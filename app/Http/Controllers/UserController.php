@@ -76,4 +76,16 @@ class UserController extends Controller
 
 
 
+    public function addNotes(Request $request){
+
+        $notes = $request->notes;
+
+        $user = User::find(Auth::user()->id);
+        $user->notes = $notes;
+        $user->save();
+
+
+        return redirect()->back();
+
+    }
 }

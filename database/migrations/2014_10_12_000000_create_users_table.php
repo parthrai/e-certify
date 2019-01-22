@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('license')->nullable();
             $table->string('phone')->nullable();
+            $table->string('notes')->nullable();
             $table->boolean('account_status')->default(false);
 
             $table->date('subscription_expiry')->nullable();

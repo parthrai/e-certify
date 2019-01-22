@@ -35,6 +35,9 @@ Route::get('/user/certs','HomeController@checkStatus');
 Route::get('/user/activate','UserController@activateAccount');
 Route::post('/user/pay','UserController@activateAccount');
 
+Route::post('/user/savenotes','UserController@addNotes');
+
+
 
 // Admin Routes
 

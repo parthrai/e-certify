@@ -23,7 +23,7 @@
                        @ready="playerReadied">
         </video-player>
 
-        <h2>time is = {{time}}</h2>
+
 
 
 
