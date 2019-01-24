@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->boolean('account_status')->default(false);
 
             $table->date('subscription_expiry')->nullable();
+            $table->date('completion_date')->nullable();
 
             $table->string('password');
             $table->rememberToken();

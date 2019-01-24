@@ -38,6 +38,9 @@ Route::post('/user/pay','UserController@activateAccount');
 Route::post('/user/savenotes','UserController@addNotes');
 Route::post('/user/contactSupport','UserController@contactSupport');
 
+Route::post('/users/video/status','UserController@getVideoStatus');
+Route::post('/users/video/update','UserController@updateVideoTable');
+
 
 
 // Admin Routes

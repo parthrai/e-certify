@@ -471,7 +471,7 @@
 
                     </div>
 
-                    <table-component></table-component>
+                    <table-component user_id="{{Auth::user()->id}}"></table-component>
 
                 </div>
 

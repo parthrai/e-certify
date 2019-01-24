@@ -101,6 +101,11 @@
                     next = "home/video/2"
                     res[3]=1;
                 }
+                else if(path=="/home/video/12"){
+                    console.log("here")
+                    next = "home/video/1"
+                    res[3]=12;
+                }
                 else {
 
                     next = parseInt(res[3]) +1

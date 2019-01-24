@@ -49,6 +49,7 @@
 
     export default{
 
+        props: ['user_id'],
         data(){
 
             return{
@@ -68,7 +69,7 @@
             getVideoStatus(){
 
                 let data= {
-                    user_id:2,
+                    user_id:this.user_id,
                 }
                 axios.post('/api/users/video/status',data).then(response => {
                     console.log(response.data);

@@ -95,10 +95,10 @@ class HomeController extends Controller
         $today= date('Y-m-d');
 
         $user_email=\Auth::user()->email;
-        $video_id = $_POST['video_id'];
+       // $video_id = $_POST['video_id'];
 
 
-        $task=$_POST['task'];
+       // $task=$_POST['task'];
 
 
 
@@ -118,20 +118,20 @@ class HomeController extends Controller
 
         $file=file_exists('images/certi/'.Auth::user()->id.'.jpg');
 
-        if($this->checkVids() && !$file) {
+        if( !$file) {
 
 
             header('Content-type: image/jpeg');
 
 
-            $jpg_image = imagecreatefromjpeg('http://test.test/images/certi/certificate.jpg');
+            $jpg_image = imagecreatefromjpeg('https://e-certify.bhmlabs.ca/images/certi/certificate.jpg');
 
 
             $color = imagecolorallocate($jpg_image, 10, 10, 10);
 
             $date = date('M j Y ', strtotime(Auth::user()->completion_date));
             $name = Auth::user()->name;
-            $license = Auth::user()->license_number;
+            $license = Auth::user()->license;
 
 
             $font_path = 'fonts/font.ttf';

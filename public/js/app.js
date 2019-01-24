@@ -2493,6 +2493,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['user_id'],
   data: function data() {
     return {
       videoStatus: []
@@ -2506,7 +2507,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       var data = {
-        user_id: 2
+        user_id: this.user_id
       };
       axios.post('/api/users/video/status', data).then(function (response) {
         console.log(response.data);
@@ -2618,6 +2619,10 @@ __webpack_require__.r(__webpack_exports__);
         console.log("here");
         next = "home/video/2";
         res[3] = 1;
+      } else if (path == "/home/video/12") {
+        console.log("here");
+        next = "home/video/1";
+        res[3] = 12;
       } else {
         next = parseInt(res[3]) + 1;
         next = "home/video/" + next;
