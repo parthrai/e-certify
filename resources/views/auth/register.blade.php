@@ -93,19 +93,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('license_number') ? ' has-error' : '' }}">
-                                <label class="col-md-4 control-label">RE License #</label>
-
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" name="license" value="{{ old('license_number') }}">
-
-                                    @if ($errors->has('license_number'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('license_number') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
+                           
 
                             <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
                                 <label class="col-md-4 control-label">Phone</label>
