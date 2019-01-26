@@ -104,4 +104,108 @@ class UserController extends Controller
         return redirect()->back();
 
     }
+
+
+    public function addLicenseNumber(Request $requests){
+
+        $license = $requests->lin;
+
+        $user = User::find(Auth::user()->id);
+
+        $user->license = $license;
+
+
+        $user->save();
+
+
+
+
+
+
+
+        $this->createCertificate($license);
+
+
+
+
+        return redirect()->back();
+
+
+
+    }
+
+
+    public function createCertificate($license){
+        $today= date('Y-m-d');
+
+        $user_email=\Auth::user()->email;
+        // $video_id = $_POST['video_id'];
+
+
+        // $task=$_POST['task'];
+
+
+
+
+
+
+
+
+
+
+
+        $data = array(
+            'completion_date' => $today
+        );
+
+        DB::table('users')->where('id', Auth::user()->id)->update($data);
+
+        $file=file_exists('images/certi/'.Auth::user()->id.'.jpg');
+
+        if( !$file) {
+
+
+            header('Content-type: image/jpeg');
+
+
+            $jpg_image = imagecreatefromjpeg('https://e-certify.bhmlabs.ca/images/certi/certificate.jpg');
+
+
+            $color = imagecolorallocate($jpg_image, 10, 10, 10);
+
+            $date = date('M j Y ', strtotime(Auth::user()->completion_date));
+            $name = Auth::user()->name;
+
+
+
+           // print_r( $license );
+
+            $font_path = 'fonts/font.ttf';
+
+
+            $text = "This is a sunset!";
+            $fontSize = 8;
+
+            imagettftext($jpg_image, 18, 0, 668, 280, $color, $font_path, $name);
+
+            imagettftext($jpg_image, 18, 0, 669, 538, $color, $font_path, date("F jS Y", strtotime($today)));
+            //imagettftext($jpg_image, 18, 0, 589, 442, $color, $font_path, $license);
+            imagettftext($jpg_image, 18, 0, 169, 538, $color, $font_path, $license);
+
+
+            imagejpeg($jpg_image, 'images/certi/' . Auth::user()->id . '.jpg');
+            $data2 = array(
+                'completion' => $today,
+            );
+
+
+
+        }
+
+
+
+
+
+
+    }
 }

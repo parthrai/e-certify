@@ -395,6 +395,68 @@
 
     <!-- End user guid modal -->
 
+
+
+    <!--- License Number Modal ------->
+
+        <div class="modal fade" id="licenseModal" role="dialog">
+        <div class="modal_container">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class=".col-sm-12 modal-header">
+
+
+
+                        <h3>Enter  License Number to download Certificate</h3>
+
+
+
+                    </div>
+                    <div class="modal-body">
+
+                        <form class="form-horizontal" role="form" method="post" action="/user/updateLicense">
+                            <input type="hidden" name="_token" value="<?= csrf_token();?>">
+
+
+
+
+                            <div class="form-group">
+
+                                <div class="col-sm-3">
+                                    <label for="message" class="white col-sm-12 control-label">License number</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control"  name="lin">
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <input id="submit" name="submit" type="submit" value="Download Certificate" class="btn btn-primary">
+                                </div>
+                            </div>
+                        </form>
+
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!----- End License number modal --- >
+
     <!-- survey modal -->
 
 
@@ -415,8 +477,11 @@
             <li><a href="#helpguide" data-toggle="modal"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> User Guide</a></li>
 
             @if($showCert)
-
-                <li><a href="#certificatemodal" data-toggle="modal" class="wow pulse" data-wow-iteration="infinite" data-wow-duration="1000ms"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Download Certificate</a></li>
+                @if(Auth::user()->license==NULL  )
+                    <li><a href="#licenseModal" data-toggle="modal" class="wow pulse" data-wow-iteration="infinite" data-wow-duration="1000ms"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Download Certificate</a></li>
+                @else
+                    <li><a href="#certificatemodal" data-toggle="modal" class="wow pulse" data-wow-iteration="infinite" data-wow-duration="1000ms"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Download Certificate</a></li>
+                @endif
             @endif
 
             <li role="presentation" class="divider"></li>
