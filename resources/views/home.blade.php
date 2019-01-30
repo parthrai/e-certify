@@ -9,15 +9,16 @@
         <title>Welcome {{Auth::user()->name}}</title>
 
         <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="{{ URL::asset('css/datepicker3.css') }}" rel="stylesheet">
+
         <link href="{{ URL::asset('css/styles.css') }}" rel="stylesheet">
         <link href="{{ URL::asset('css/animate.css') }}" rel="stylesheet">
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 
         <script src="{{ URL::asset('js/wow.min.js') }}"></script>
@@ -26,13 +27,16 @@
             new WOW().init();
         </script>
 
-        <!--Icons-->
-        <script src="{{ URL::asset('js/lumino.glyphs.js') }}"></script>
 
         <!--[if lt IE 9]>
         <script src="{{ URL::asset('js/html5shiv.js') }}"></script>
         <script src="{{ URL::asset('js/respond.min.js') }}"></script>
         <![endif]-->
+
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 
         <link rel="stylesheet" href="{{asset('checkouts/css/style.css')}}">
@@ -51,20 +55,24 @@
                 height: auto;
             }
         </style>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
         <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.min.js"></script>
         <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
 
-        <script src="{{ asset('js/app.js') }}" defer></script>
+
 
 
         <link href="//vjs.zencdn.net/7.3.0/video-js.min.css" rel="stylesheet">
-        <script src="//vjs.zencdn.net/7.3.0/video.min.js"></script>
+
+
 
 
 
 
     </head>
+
+
+
 
     <?php
     if(!isset($video))
@@ -132,16 +140,12 @@
 
     ?>
 
-<div>
+
+<body>
 
 <div id="app">
 
-
-
-
-
-
-<div class="container" id="app">
+    <div class="container">
 
 
 
@@ -169,36 +173,9 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-    <!-- video modal -->
+   <!-- contact support modal -->
 
-    <div class="modal fade" id="videomodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel"></h4>
-                </div>
-                <div class="modal-body">
-                    <p>Please click the "Resume" button to continue playing the course video.</p>
-                </div>
-                <div class="modal-footer">
-                    <div class="form-group">
-                        <div class="col-sm-10 col-sm-offset-2">
-
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Resume</button>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-
-    <!-- video modal -->
-
-    <!-- contact support modal -->
-
-    <div class="modal fade" id="contactsupportmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+         <div class="modal fade" id="contactsupportmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -247,16 +224,11 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-
     <!-- contact support modal -->
 
     <!-- certificate modal -->
 
-
-
-
-    <!-- certificate modal -->
-    <div class="modal fade" id="certificatemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal fade" id="certificatemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -278,17 +250,11 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-
-    <!-- contact support modal -->
-
-
-
-
-    <!-- contact support modal -->
+    <!-- certificate modal  END-->
 
     <!-- Notes Modal -->
 
-    <div class="modal fade" id="notesmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+         <div class="modal fade" id="notesmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -337,13 +303,11 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-
     <!-- Notes Modal End-->
-
 
     <!-- User guide --->
 
-    <div class="modal fade" id="helpguide" role="dialog">
+          <div class="modal fade" id="helpguide" role="dialog">
         <div class="modal_container">
             <div class="modal-dialog">
 
@@ -394,8 +358,6 @@
     </div>
 
     <!-- End user guid modal -->
-
-
 
     <!--- License Number Modal ------->
 
@@ -454,15 +416,7 @@
         </div>
     </div>
 
-
-    <!----- End License number modal --- >
-
-    <!-- survey modal -->
-
-
-
-
-    <!-- survey modal -->
+    <!----- End License number modal --->
 
     <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
         <form role="search">
@@ -501,11 +455,6 @@
             </div>
         </div><!--/.row-->
 
-
-
-
-
-
         <div class="row">
             <div class="col-md-12">
 
@@ -514,8 +463,27 @@
 
                     <div class="panel col-md-offset-1">
 
-                       <video-component user_id="{{Auth::user()->id}}"></video-component>
 
+
+
+
+
+
+
+                        <video id="my-video"
+                               class="video-js"
+                               controls
+
+
+
+
+
+                        >
+
+                            <source src="http://test.test/videos/1.mp4" type="video/mp4">
+
+                        </video>
+                        <input type="hidden" id="user_id" value="{{Auth::user()->id}}">
 
 
 
@@ -536,7 +504,50 @@
 
                     </div>
 
-                    <table-component user_id="{{Auth::user()->id}}"></table-component>
+                    <div class="panel">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Module</th>
+                                <th>Part I</th>
+                                <th>Part II</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="success">
+                                <td>Broker Responsibility in a Nutshell</td>
+                                <td><i class="{{$videoStatus->vid1  ? 'glyphicon glyphicon-ok' : ''}}" ></i> <a class="" href="/home/video/1">Part 1</a> |<a href="/PPT/Understanding_Procuring_Cause.ppt"> &nbsp;PPT <img src="/images/ppt.png" height="20" width="20"></a> </td>
+                                <td><i class="{{$videoStatus->vid2  ? 'glyphicon glyphicon-ok' : ''}}" ></i> <a class="" href="/home/video/2">Part 2</a> | <a href="/PPT/Brokerage_in_a_Nutshell.pptx">&nbsp;PPT <img src="/images/ppt.png" height="20" width="20"></a></td>
+                            </tr>
+                            <tr class="info">
+                                <td>Disclose, Disclose, Disclose</td>
+                                <td><i class="{{$videoStatus->vid3  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/3">Part 1</a> | <a href="/PPT/Disclose__Disclose_Disclose_part_1.ppt">&nbsp;PPT <img src="/images/ppt.png" height="20" width="20"></a></td>
+                                <td><i class="{{$videoStatus->vid4  ? 'glyphicon glyphicon-ok' : ''}}" ></i> <a class="" href="/home/video/4">Part 2</a> | <a href="/PPT/Disclose__Disclose_Disclose_part_2.ppt">&nbsp;PPT <img src="/images/ppt.png" height="20" width="20"></a></td>
+                            </tr>
+                            <tr class="success">
+                                <td>Advertising Compliance</td>
+                                <td><i class="{{$videoStatus->vid5  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/5">Part 1</a> | <a href="/PPT/Mass_advertising_made_easy.ppt">&nbsp;PPT <img src="/images/ppt.png" height="20" width="20"></a></td>
+                                <td><i class="{{$videoStatus->vid6  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/6">Part 2</a> | <a href="/PPT/mass_advertising_part_2.pptx">&nbsp;PPT <img src="/images/ppt.png" height="20" width="20"></a></td>
+                            </tr>
+                            <tr class="info">
+                                <td>Conflicts of Interest</td>
+                                <td><i class="{{$videoStatus->vid7  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/7">Part 1</a> | <a href="/PPT/conflicts_power_point_with_dual_agency_edit.ppt">&nbsp;PPT <img src="/images/ppt.png" height="20" width="20"></a></td>
+                                <td><i class="{{$videoStatus->vid8  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a  class="" href="/home/video/8">Part 2</a> | <a href="/PPT/conflicts_power_point_with_dual_agency-edit2.ppt">&nbsp;PPT <img src="/images/ppt.png" height="20" width="20"></a></td>
+                            </tr>
+                            <tr class="success">
+                                <td>Professional Ethics</td>
+                                <td><i class="{{$videoStatus->vid9  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/9">Part 1</a> | <a href="/PPT/Mass_Professionalism_Course.pptx">&nbsp;PPT <img src="/images/ppt.png" height="20" width="20"></a></td>
+                                <td><i class="{{$videoStatus->vid10  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/10">Part 2</a> | <a href="/PPT/Mass_Professionalism_Course_part2.pptx">&nbsp;PPT <img src="/images/ppt.png" height="20" width="20"></a></td>
+                            </tr>
+                            <tr class="info">
+                                <td>Dual Agency</td>
+                                <td><i class="{{$videoStatus->vid11  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/11">Part 1</a> | <a href="/PPT/implementing_dual_agency_MASS__Autosaved_.pptx">&nbsp;PPT <img src="/images/ppt.png" height="20" width="20"></a></td>
+                                <td><i class="{{$videoStatus->vid12  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/12">Part 2</a> | <a href="/PPT/implementing_dual_agency_MASS_pt2_Autosaved_.pptx">&nbsp;PPT <img src="/images/ppt.png" height="20" width="20"></a></td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
 
                 </div>
 
@@ -546,16 +557,23 @@
         </div>
 
     </div><!--/.col-->
-</div><!--/.row-->
+</div>
+
 </div>	<!--/.main-->
-</div>
 
-<script src="{{URL::asset('js/jquery-1.11.1.min.js')}}"></script>
-<script src="{{URL::asset('js/bootstrap.min.js')}}"></script>
-
+<script src="https://vjs.zencdn.net/7.3.0/video.js"></script>
+<script src="/new/js/video.js"></script>
 
 
-</div>
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>

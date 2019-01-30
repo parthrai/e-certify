@@ -49,6 +49,8 @@ if (document.getElementById("vid1")) {
 
 		myPlayer.on("ended",function(event){
 
+			console.log("video is ended");
+
 			$.ajax({ //line 28
 				url: 'https://ecertifyeducation.com/updatevideodata',
 				type: 'POST',
@@ -196,6 +198,9 @@ if (document.getElementById("watched")) {
 		var video_id = $('#video_id').val();
 		var next =parseInt(video_id)+parseInt(1);
 
+
+		console.log("I AM HERE ");
+
 		/*
 		this.currentTime(getCookie("resume_duration"+video_id));
 		console.log(document.URL);
@@ -212,6 +217,9 @@ if (document.getElementById("watched")) {
 
 
 		myPlayer.on("ended",function(event){
+
+
+			console.log("video ended");
 
 			$.ajax({ //line 28
 				url: 'https://ecertifyeducation.com/updatevideodata',

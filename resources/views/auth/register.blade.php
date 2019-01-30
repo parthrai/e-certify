@@ -93,7 +93,7 @@
                                 </div>
                             </div>
 
-                           
+
 
                             <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
                                 <label class="col-md-4 control-label">Phone</label>

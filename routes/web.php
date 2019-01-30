@@ -28,6 +28,15 @@ Route::get('home/video/{id}', function ($id) {
 });
 
 
+Route::get('video', function () {
+    //return view('dashboard');
+
+    return view('video');
+});
+
+
+
+
 Route::get('/home/video/{id}','HomeController@video');
 
 Route::get('/user/certs','HomeController@checkStatus');
@@ -51,3 +60,7 @@ Route::get('/admin/users/list','AdminController@Users');
 
 Route::get('/admin/users/export','AdminController@exportUsers');
 Route::get('/admin/users/exportAll','AdminController@exportAllUsers');
+
+
+
+

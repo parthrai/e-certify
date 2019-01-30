@@ -63,8 +63,10 @@ class UserController extends Controller
 
     public function updateVideoTable(Request $request){
 
-        $user_id = $request->user_id;
-        $video_id = $request->video_id;
+
+
+        $user_id = $request->data['user_id'];
+        $video_id = $request->data['video_id'];
 
         $up = DB::table('video_statuses')->where('user_id',$user_id)->update(['vid'.$video_id => true]);
 
