@@ -480,7 +480,7 @@
 
                         >
 
-                            <source src="http://test.test/videos/1.mp4" type='video/mp4'>
+                            <source src="{{request()->getSchemeAndHttpHost()}}/videos/1.mp4" type='video/mp4'>
 
                         </video>
                         <input type="hidden" id="user_id" value="{{Auth::user()->id}}">
