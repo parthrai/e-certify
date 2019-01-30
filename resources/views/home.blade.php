@@ -226,7 +226,64 @@
 
     <!-- contact support modal -->
 
-    <!-- certificate modal -->
+        <!-- survey modal -->
+
+        <div class="modal fade" id="surveymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Course Survey</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p> Help us improve our school. Please send us your comments and suggestions.</p>
+                        <form class="form-horizontal" role="form" method="post" action="/survey">
+                            <input type="hidden" name="_token" value="<?= csrf_token();?>">
+
+
+
+                            <br>
+
+
+
+                            <div class="form-group">
+
+                                <div class="col-sm-10">
+                                    <textarea rows="5" cols="60" name="msg" placeholder = "Feedback" id="msg" class="form-control" ></textarea>
+
+
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10 col-sm-offset-2">
+                                    <! Will be used to display an alert to the user>
+                                </div>
+                            </div>
+
+
+                            <hr>
+                            <a href="{{URL::asset('docs/board_survey.pdf')}}" target="_blank">Download Board Survey</a>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group">
+                            <div class="col-sm-10 col-sm-offset-2">
+                                <input name="submit" type="submit" value="Send" class="btn btn-blue">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+        <!-- survey modal -->
+
+
+        <!-- certificate modal -->
 
           <div class="modal fade" id="certificatemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -432,6 +489,9 @@
             <li><a href="/PPT.zip" ><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Download PPTs</a></li>
 
             @if($showCert)
+
+                <li><a href="#surveymodal" data-toggle="modal"><svg class="glyph stroked star"><use xlink:href="#stroked-star"></use></svg>Course Survey</a></li>
+
                 @if(Auth::user()->license==NULL  )
                     <li><a href="#licenseModal" data-toggle="modal" class="wow pulse" data-wow-iteration="infinite" data-wow-duration="1000ms"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Download Certificate</a></li>
                 @else
