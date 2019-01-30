@@ -239,7 +239,7 @@
                         <p> Help us improve our school. Please send us your comments and suggestions.</p>
 
                         <a href="{{URL::asset('docs/board_survey.pdf')}}" target="_blank">Download Board Survey</a>
-                        
+                    </div>
                     <div class="modal-footer">
                         <div class="form-group">
                             <div class="col-sm-10 col-sm-offset-2">
