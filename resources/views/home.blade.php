@@ -237,35 +237,9 @@
                     </div>
                     <div class="modal-body">
                         <p> Help us improve our school. Please send us your comments and suggestions.</p>
-                        <form class="form-horizontal" role="form" method="post" action="/survey">
-                            <input type="hidden" name="_token" value="<?= csrf_token();?>">
 
-
-
-                            <br>
-
-
-
-                            <div class="form-group">
-
-                                <div class="col-sm-10">
-                                    <textarea rows="5" cols="60" name="msg" placeholder = "Feedback" id="msg" class="form-control" ></textarea>
-
-
-
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-sm-10 col-sm-offset-2">
-                                    <! Will be used to display an alert to the user>
-                                </div>
-                            </div>
-
-
-                            <hr>
-                            <a href="{{URL::asset('docs/board_survey.pdf')}}" target="_blank">Download Board Survey</a>
-                    </div>
+                        <a href="{{URL::asset('docs/board_survey.pdf')}}" target="_blank">Download Board Survey</a>
+                        
                     <div class="modal-footer">
                         <div class="form-group">
                             <div class="col-sm-10 col-sm-offset-2">
