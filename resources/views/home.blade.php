@@ -34,7 +34,7 @@
         <![endif]-->
 
 
-        
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
@@ -480,7 +480,7 @@
 
                         >
 
-                            <source src="http://test.test/videos/1.mp4" type="video/mp4">
+                            <source src="http://test.test/videos/1.mp4" type='video/mp4'>
 
                         </video>
                         <input type="hidden" id="user_id" value="{{Auth::user()->id}}">
