@@ -429,6 +429,7 @@
             <li><a href="#contactsupportmodal" data-toggle="modal"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Contact Support</a></li>
             <li><a href="#notesmodal" data-toggle="modal"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Notes</a></li>
             <li><a href="#helpguide" data-toggle="modal"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> User Guide</a></li>
+            <li><a href="/PPT.zip" ><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Download PPTs</a></li>
 
             @if($showCert)
                 @if(Auth::user()->license==NULL  )
