@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f08f739c-7c63-44de-94f7-52c0228441d5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/video.blade.php" afterPath="$PROJECT_DIR$/resources/views/video.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="482" column="41" lean-forward="false" selection-start-line="482" selection-start-column="41" selection-end-line="482" selection-end-column="41" />
+              <caret line="482" column="110" lean-forward="true" selection-start-line="482" selection-start-column="28" selection-end-line="482" selection-end-column="110" />
               <folding>
                 <element signature="e#1943#1948#0#PHP" expanded="false" />
                 <element signature="e#2004#2009#0#PHP" expanded="false" />
@@ -170,12 +170,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="video.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="video.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/video.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="54" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="54" />
-              <folding />
+            <state relative-caret-position="295">
+              <caret line="20" column="86" lean-forward="false" selection-start-line="20" selection-start-column="86" selection-end-line="20" selection-end-column="86" />
+              <folding>
+                <marker date="1548828953705" expanded="true" signature="197:230" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -247,10 +249,10 @@
         <option value="$PROJECT_DIR$/public/js/index.js" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/resources/views/video.blade.php" />
         <option value="$PROJECT_DIR$/public/new/js/video.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/video.blade.php" />
       </list>
     </option>
   </component>
@@ -516,12 +518,12 @@
       <workItem from="1548606809054" duration="12391000" />
       <workItem from="1548640278191" duration="5917000" />
       <workItem from="1548783538484" duration="3844000" />
-      <workItem from="1548822115404" duration="5169000" />
+      <workItem from="1548822115404" duration="5489000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131969000" />
+    <option name="totallyTimeSpent" value="132289000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -862,14 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/video.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="54" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/users/video.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="516">
@@ -973,7 +967,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="482" column="41" lean-forward="false" selection-start-line="482" selection-start-column="41" selection-end-line="482" selection-end-column="41" />
+          <caret line="482" column="110" lean-forward="true" selection-start-line="482" selection-start-column="28" selection-end-line="482" selection-end-column="110" />
           <folding>
             <element signature="e#1943#1948#0#PHP" expanded="false" />
             <element signature="e#2004#2009#0#PHP" expanded="false" />
@@ -1012,6 +1006,16 @@
             <marker date="1548828633289" expanded="true" signature="21215:21267" ph="..." />
             <marker date="1548828633289" expanded="true" signature="21628:21680" ph="..." />
             <marker date="1548828633289" expanded="true" signature="21916:21968" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/video.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="20" column="86" lean-forward="false" selection-start-line="20" selection-start-column="86" selection-end-line="20" selection-end-column="86" />
+          <folding>
+            <marker date="1548828953705" expanded="true" signature="197:230" ph="..." />
           </folding>
         </state>
       </provider>

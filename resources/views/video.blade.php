@@ -18,8 +18,7 @@
 
 >
 
-    <source src="http://test.test/videos/1.mp4" type="video/mp4">
-
+    <source src="{{request()->getSchemeAndHttpHost()}}/videos/1.mp4" type='video/mp4'>
 </video>
 
 
