@@ -37,7 +37,7 @@
                                 <td class="text-center">{{user.id}}</td>
                                 <td ><img src="https://www.pngarts.com/files/3/Avatar-PNG-Photo.png" height="50" width="50"/></td>
 
-                                <td>{{user.name}}</td>
+                                <td><a :href="profileLink(user.id)">{{user.name}} </a></td>
                                 <td>{{user.email}}</td>
                                 <td>{{user.phone}}</td>
                                 <td>{{user.license}}</td>
@@ -214,6 +214,12 @@
 
             },
 
+
+            profileLink(user_id){
+
+                return '/admin/user/'+user_id;
+
+            },
 
 
             deleteUsers(user_id){

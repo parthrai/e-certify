@@ -62,5 +62,9 @@ Route::get('/admin/users/export','AdminController@exportUsers');
 Route::get('/admin/users/exportAll','AdminController@exportAllUsers');
 
 
+Route::get('/admin/user/{id}','AdminController@userInfo');
+Route::get('/admin/user/{user_id}/video/{video_id}','AdminController@skipVideo');
+
+
 
 

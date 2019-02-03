@@ -10,8 +10,6 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 import Notifications from 'vue-notification';
-import VueVideoPlayer from 'vue-video-player';
-import 'video.js/dist/video-js.css'
 
 import VueStripeCheckout from 'vue-stripe-checkout';
 
@@ -25,7 +23,7 @@ Vue.use(VModal)
 
 
 
-Vue.use(VueVideoPlayer);
+
 Vue.use(Notifications);
 
 /**
@@ -44,7 +42,7 @@ Vue.component('coupons-component', require('./components/admin/coupons').default
 Vue.component('users-component', require('./components/admin/users').default);
 Vue.component('stripe-component', require('./components/users/stripe').default);
 Vue.component('table-component', require('./components/users/table').default);
-Vue.component('video-component', require('./components/users/video').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

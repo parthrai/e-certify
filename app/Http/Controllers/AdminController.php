@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Alluser;
 use App\Coupon;
 use App\User;
+use App\VideoStatus;
 use Illuminate\Http\Request;
 use Excel;
+use Illuminate\Support\Facades\DB;
 use Stripe\ApiOperations\All;
 
 class AdminController extends Controller
@@ -216,4 +218,90 @@ class AdminController extends Controller
 
         })->export('xls');
     }
+
+
+    public function userInfo($id){
+
+        $progress = $this->videoProgress($id);
+
+        $user= User::find($id);
+
+        $videoStatus = VideoStatus::where('user_id',$id)->first();
+
+        return view('admin.userPage')->with(['progress'=>$progress , 'user'=>$user , 'videoStatus' => $videoStatus]);
+
+
+
+
+    }
+
+
+
+
+    public function videoProgress($id){
+
+        $VideoStatus = VideoStatus::where('user_id',$id)->first();
+        $counter= 0;
+        if($VideoStatus->vid1)
+            $counter++;
+        if($VideoStatus->vid2)
+            $counter++;
+        if($VideoStatus->vid3)
+            $counter++;
+        if($VideoStatus->vid4)
+            $counter++;
+        if($VideoStatus->vid5)
+            $counter++;
+        if($VideoStatus->vid6)
+            $counter++;
+        if($VideoStatus->vid7)
+            $counter++;
+        if($VideoStatus->vid8)
+            $counter++;
+        if($VideoStatus->vid9)
+            $counter++;
+        if($VideoStatus->vid10)
+            $counter++;
+        if($VideoStatus->vid11)
+            $counter++;
+        if($VideoStatus->vid12)
+            $counter++;
+
+
+
+        $progress= ($counter/12)*100;
+
+
+
+        return $progress;
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+    public function skipVideo($user_id,$video_id){
+
+
+        $up = DB::table('video_statuses')->where('user_id',$user_id)->update(['vid'.$video_id => true]);
+
+        return redirect()->back();
+
+        return $video_id;
+
+
+
+    }
+
+
 }
