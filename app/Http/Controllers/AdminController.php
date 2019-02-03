@@ -148,7 +148,7 @@ class AdminController extends Controller
 
         $getUsers=User::where('is_admin',false)->get();
 
-        $dataArray[]=['Full Name','Email','Phone #','RE License #','Date Of Registration'];
+        $dataArray[]=['Full Name','Email','Phone #','RE License #','Date Of Registration','Date of Completetion'];
 
 
         foreach($getUsers as $r){
@@ -158,7 +158,8 @@ class AdminController extends Controller
                 'Email'=>$r->email,
                 'Phone #'=>$r->phone,
                 'RE License #'=>$r->license,
-                'Date Of Registration'=>$r->created_at
+                'Date Of Registration'=>$r->created_at,
+                'Date of Completion' => $r->completion_date
 
 
             );
@@ -188,7 +189,7 @@ class AdminController extends Controller
         $getUsers=User::where('is_admin',false)->get();
         $getUsers= Alluser::all();
 
-        $dataArray[]=['Full Name','Email','Phone #','RE License #','Date Of Registration'];
+        $dataArray[]=['Full Name','Email','Phone #','RE License #','Date Of Registration','Date of Completion'];
 
 
         foreach($getUsers as $r){
@@ -198,7 +199,8 @@ class AdminController extends Controller
                 'Email'=>$r->email,
                 'Phone #'=>$r->phone,
                 'RE License #'=>$r->license,
-                'Date Of Registration'=>$r->created_at
+                'Date Of Registration'=>$r->created_at,
+                'Date of Completion' => $r->completion_date
 
 
             );
