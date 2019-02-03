@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f08f739c-7c63-44de-94f7-52c0228441d5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/userPage.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/userPage.blade.php" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/admin/users.vue" afterPath="$PROJECT_DIR$/resources/js/components/admin/users.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +19,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="userPage.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="userPage.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/userPage.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="533">
@@ -58,44 +60,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="panel.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/panel.blade.php">
+      <file leaf-file-name="2014_10_12_000000_create_users_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
-              <caret line="82" column="20" lean-forward="false" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
-              <folding>
-                <marker date="1549158995447" expanded="true" signature="469:489" ph="..." />
-                <marker date="1549158995447" expanded="true" signature="6260:6278" ph="..." />
-                <marker date="1549158995447" expanded="true" signature="6413:6429" ph="..." />
-                <marker date="1549158995447" expanded="true" signature="8732:8748" ph="..." />
-                <marker date="1549158995447" expanded="true" signature="9149:9158" ph="..." />
-                <marker date="1549158995447" expanded="true" signature="13957:13986" ph="..." />
-                <marker date="1549158995447" expanded="true" signature="14026:14057" ph="..." />
-                <marker date="1549158995447" expanded="true" signature="14153:14191" ph="..." />
-                <marker date="1549158995447" expanded="true" signature="14220:14254" ph="..." />
-                <marker date="1549158995447" expanded="true" signature="14283:14313" ph="..." />
-                <marker date="1549158995447" expanded="true" signature="14342:14373" ph="..." />
-                <marker date="1549158995447" expanded="true" signature="14402:14435" ph="..." />
-                <marker date="1549158995447" expanded="true" signature="14464:14502" ph="..." />
-                <marker date="1549158995447" expanded="true" signature="14531:14572" ph="..." />
-              </folding>
+            <state relative-caret-position="425">
+              <caret line="27" column="41" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="users.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/js/components/admin/users.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="39" column="65" lean-forward="false" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
+            <state relative-caret-position="153">
+              <caret line="47" column="58" lean-forward="false" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
               <folding>
-                <element signature="e#4236#5457#0" expanded="false" />
-                <element signature="e#5506#5744#0" expanded="false" />
-                <element signature="e#5778#5886#0" expanded="false" />
-                <element signature="e#5920#5996#0" expanded="false" />
-                <element signature="e#6023#6221#0" expanded="false" />
-                <element signature="e#6257#6811#0" expanded="false" />
-                <element signature="e#6846#7396#0" expanded="false" />
+                <element signature="e#4355#5576#0" expanded="false" />
+                <element signature="e#5625#5863#0" expanded="false" />
+                <element signature="e#5897#6005#0" expanded="false" />
+                <element signature="e#6039#6115#0" expanded="false" />
+                <element signature="e#6142#6340#0" expanded="false" />
+                <element signature="e#6376#6930#0" expanded="false" />
+                <element signature="e#6965#7515#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -146,52 +133,22 @@
       <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="228" column="20" lean-forward="false" selection-start-line="228" selection-start-column="8" selection-end-line="228" selection-end-column="20" />
+            <state relative-caret-position="527">
+              <caret line="41" column="32" lean-forward="false" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
               <folding>
                 <element signature="e#269#336#0#PHP" expanded="false" />
-                <element signature="e#343#937#0#PHP" expanded="false" />
-                <element signature="e#943#1150#0#PHP" expanded="false" />
-                <element signature="e#1156#1362#0#PHP" expanded="false" />
-                <element signature="e#1369#1520#0#PHP" expanded="false" />
-                <element signature="e#1530#1601#0#PHP" expanded="false" />
-                <element signature="e#1607#1706#0#PHP" expanded="false" />
-                <element signature="e#1712#1994#0#PHP" expanded="false" />
-                <element signature="e#2000#2155#0#PHP" expanded="false" />
-                <element signature="e#2161#2336#0#PHP" expanded="false" />
-                <element signature="e#2345#3242#0#PHP" expanded="false" />
-                <element signature="e#3249#4275#0#PHP" expanded="false" />
-                <element signature="e#4599#5475#0#PHP" expanded="false" />
-                <element signature="e#5482#5707#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="70" column="104" lean-forward="false" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="104" />
-              <folding>
-                <element signature="e#332#894#0#PHP" expanded="false" />
-                <element signature="e#900#1100#0#PHP" expanded="false" />
-                <element signature="e#1403#1878#0#PHP" expanded="false" />
-                <element signature="e#1885#2108#0#PHP" expanded="false" />
-                <element signature="e#2115#2410#0#PHP" expanded="false" />
-                <element signature="e#2417#3918#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="44" column="24" lean-forward="false" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="24" />
-              <folding>
-                <element signature="e#1329#1694#0#PHP" expanded="false" />
+                <element signature="e#999#1206#0#PHP" expanded="false" />
+                <element signature="e#1212#1418#0#PHP" expanded="false" />
+                <element signature="e#1425#1576#0#PHP" expanded="false" />
+                <element signature="e#1586#1657#0#PHP" expanded="false" />
+                <element signature="e#1663#1762#0#PHP" expanded="false" />
+                <element signature="e#1768#2050#0#PHP" expanded="false" />
+                <element signature="e#2056#2211#0#PHP" expanded="false" />
+                <element signature="e#2217#2392#0#PHP" expanded="false" />
+                <element signature="e#2401#3298#0#PHP" expanded="false" />
+                <element signature="e#3305#4331#0#PHP" expanded="false" />
+                <element signature="e#4655#5531#0#PHP" expanded="false" />
+                <element signature="e#5538#5763#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -255,10 +212,10 @@
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/panel.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/resources/js/app.js" />
-        <option value="$PROJECT_DIR$/resources/js/components/admin/users.vue" />
         <option value="$PROJECT_DIR$/resources/views/admin/userPage.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/admin/users.vue" />
       </list>
     </option>
   </component>
@@ -426,6 +383,17 @@
             <path>
               <item name="e-certify" type="b2602c69:ProjectViewProjectNode" />
               <item name="e-certify" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="e-certify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-certify" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="e-certify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-certify" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -548,12 +516,12 @@
       <workItem from="1548822115404" duration="5745000" />
       <workItem from="1548873775946" duration="1007000" />
       <workItem from="1549156158188" duration="5884000" />
-      <workItem from="1549222289235" duration="509000" />
+      <workItem from="1549222289235" duration="1474000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139945000" />
+    <option name="totallyTimeSpent" value="140910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -595,12 +563,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php</url>
-          <line>143</line>
+          <line>144</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/resources/js/components/admin/users.vue</url>
-          <line>95</line>
+          <line>97</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -742,13 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="27" column="41" lean-forward="false" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/images/certi/^B91F93EF0399CF6A866FFE75DFEF36B04A0D47FEE863291A6E^pimgpsh_fullsize_distr.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -863,16 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="44" column="24" lean-forward="false" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="24" />
-          <folding>
-            <element signature="e#1329#1694#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/panel.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1394">
@@ -904,21 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="70" column="104" lean-forward="false" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="104" />
-          <folding>
-            <element signature="e#332#894#0#PHP" expanded="false" />
-            <element signature="e#900#1100#0#PHP" expanded="false" />
-            <element signature="e#1403#1878#0#PHP" expanded="false" />
-            <element signature="e#1885#2108#0#PHP" expanded="false" />
-            <element signature="e#2115#2410#0#PHP" expanded="false" />
-            <element signature="e#2417#3918#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -941,45 +877,6 @@
           <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding>
             <element signature="e#279#324#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/admin/users.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="39" column="65" lean-forward="false" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
-          <folding>
-            <element signature="e#4236#5457#0" expanded="false" />
-            <element signature="e#5506#5744#0" expanded="false" />
-            <element signature="e#5778#5886#0" expanded="false" />
-            <element signature="e#5920#5996#0" expanded="false" />
-            <element signature="e#6023#6221#0" expanded="false" />
-            <element signature="e#6257#6811#0" expanded="false" />
-            <element signature="e#6846#7396#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="228" column="20" lean-forward="false" selection-start-line="228" selection-start-column="8" selection-end-line="228" selection-end-column="20" />
-          <folding>
-            <element signature="e#269#336#0#PHP" expanded="false" />
-            <element signature="e#343#937#0#PHP" expanded="false" />
-            <element signature="e#943#1150#0#PHP" expanded="false" />
-            <element signature="e#1156#1362#0#PHP" expanded="false" />
-            <element signature="e#1369#1520#0#PHP" expanded="false" />
-            <element signature="e#1530#1601#0#PHP" expanded="false" />
-            <element signature="e#1607#1706#0#PHP" expanded="false" />
-            <element signature="e#1712#1994#0#PHP" expanded="false" />
-            <element signature="e#2000#2155#0#PHP" expanded="false" />
-            <element signature="e#2161#2336#0#PHP" expanded="false" />
-            <element signature="e#2345#3242#0#PHP" expanded="false" />
-            <element signature="e#3249#4275#0#PHP" expanded="false" />
-            <element signature="e#4599#5475#0#PHP" expanded="false" />
-            <element signature="e#5482#5707#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1019,6 +916,78 @@
             <marker date="1549222757236" expanded="true" signature="9334:9343" ph="..." />
             <marker date="1549222757236" expanded="true" signature="9594:9613" ph="..." />
             <marker date="1549222757236" expanded="true" signature="9909:9918" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="44" column="24" lean-forward="false" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="24" />
+          <folding>
+            <element signature="e#1329#1694#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="139" column="48" lean-forward="false" selection-start-line="139" selection-start-column="48" selection-end-line="139" selection-end-column="48" />
+          <folding>
+            <element signature="e#332#894#0#PHP" expanded="false" />
+            <element signature="e#900#1100#0#PHP" expanded="false" />
+            <element signature="e#1107#1396#0#PHP" expanded="false" />
+            <element signature="e#1403#1878#0#PHP" expanded="false" />
+            <element signature="e#1885#2108#0#PHP" expanded="false" />
+            <element signature="e#2115#2410#0#PHP" expanded="false" />
+            <element signature="e#2417#3918#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="27" column="41" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="41" column="32" lean-forward="false" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+          <folding>
+            <element signature="e#269#336#0#PHP" expanded="false" />
+            <element signature="e#999#1206#0#PHP" expanded="false" />
+            <element signature="e#1212#1418#0#PHP" expanded="false" />
+            <element signature="e#1425#1576#0#PHP" expanded="false" />
+            <element signature="e#1586#1657#0#PHP" expanded="false" />
+            <element signature="e#1663#1762#0#PHP" expanded="false" />
+            <element signature="e#1768#2050#0#PHP" expanded="false" />
+            <element signature="e#2056#2211#0#PHP" expanded="false" />
+            <element signature="e#2217#2392#0#PHP" expanded="false" />
+            <element signature="e#2401#3298#0#PHP" expanded="false" />
+            <element signature="e#3305#4331#0#PHP" expanded="false" />
+            <element signature="e#4655#5531#0#PHP" expanded="false" />
+            <element signature="e#5538#5763#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/admin/users.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="47" column="58" lean-forward="false" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
+          <folding>
+            <element signature="e#4355#5576#0" expanded="false" />
+            <element signature="e#5625#5863#0" expanded="false" />
+            <element signature="e#5897#6005#0" expanded="false" />
+            <element signature="e#6039#6115#0" expanded="false" />
+            <element signature="e#6142#6340#0" expanded="false" />
+            <element signature="e#6376#6930#0" expanded="false" />
+            <element signature="e#6965#7515#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -2160,6 +2160,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -39311,6 +39313,8 @@ var render = function() {
                         _vm._v(" "),
                         _c("th", [_vm._v("Registered ")]),
                         _vm._v(" "),
+                        _c("th", [_vm._v("Completion ")]),
+                        _vm._v(" "),
                         _c(
                           "th",
                           {
@@ -39359,6 +39363,8 @@ var render = function() {
                           _c("td", [_vm._v(_vm._s(user.created_at.date))]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(user.created_at_human))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(user.completion_date))]),
                           _vm._v(" "),
                           _c("td", [
                             user.account_status == 1

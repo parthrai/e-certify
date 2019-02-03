@@ -24,6 +24,7 @@
                                 <th @click="sort('email')">license </th>
                                 <th>Registration Date </th>
                                 <th>Registered </th>
+                                <th>Completion </th>
 
                                 <th @click="sort('email')">Status </th>
 
@@ -44,6 +45,7 @@
                                 <td>{{user.created_at.date}}</td>
 
                                 <td>{{user.created_at_human}}</td>
+                                <td>{{user.completion_date}}</td>
 
                                 <td>
                                     <span v-if="user.account_status==1">

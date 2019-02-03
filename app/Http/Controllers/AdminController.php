@@ -38,7 +38,8 @@ class AdminController extends Controller
                 'license'=>$r->license,
                 'phone'=>$r->phone,
                 'created_at'=>$r->created_at,
-                'created_at_human'=>$r->created_at->diffForHumans()
+                'created_at_human'=>$r->created_at->diffForHumans(),
+                'completion_date'=>$r->completion_date
 
 
             );
