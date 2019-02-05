@@ -460,7 +460,8 @@
             <li><a href="#contactsupportmodal" data-toggle="modal"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Contact Support</a></li>
             <li><a href="#notesmodal" data-toggle="modal"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Notes</a></li>
             <li><a href="#helpguide" data-toggle="modal"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> User Guide</a></li>
-            <li><a href="/PPT.zip" ><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg> Download PPTs</a></li>
+
+
 
             @if($showCert)
 
@@ -474,6 +475,58 @@
             @endif
 
             <li role="presentation" class="divider"></li>
+            <li class="parent "><a data-toggle="collapse" href="#sub-item-1" class="collapsed" aria-expanded="false">
+                    <em class="fa fa-navicon">&nbsp;</em> Download Course PPTs <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right collapsed" aria-expanded="false"><em class="fa fa-plus"></em></span>
+                </a>
+                <ul class="children collapse" id="sub-item-1" aria-expanded="false" style="height: 0px;">
+                    <li><a href="/PPT/Understanding_Procuring_Cause.ppt" class="">
+                            <span class="fa fa-arrow-right">&nbsp;</span> Video 1
+                        </a></li>
+                    <li><a href="/PPT/Brokerage_in_a_Nutshell.pptx">
+                            <span class="fa fa-arrow-right">&nbsp;</span> Video 2
+                        </a></li>
+                    <li><a href="/PPT/Disclose__Disclose_Disclose_part_1.ppt">
+                            <span class="fa fa-arrow-right">&nbsp;</span> Video 3
+                        </a></li>
+
+                    <li><a href="/PPT/Disclose__Disclose_Disclose_part_2.ppt">
+                            <span class="fa fa-arrow-right">&nbsp;</span> Video 4
+                        </a></li>
+
+                    <li><a href="/PPT/Mass_advertising_made_easy.ppt">
+                            <span class="fa fa-arrow-right">&nbsp;</span> Video 5
+                        </a></li>
+
+                    <li><a href="/PPT/mass_advertising_part_2.pptx">
+                            <span class="fa fa-arrow-right">&nbsp;</span> Video 6
+                        </a></li>
+
+                    <li><a href="/PPT/conflicts_power_point_with_dual_agency_edit.ppt">&nbsp;
+                            <span class="fa fa-arrow-right">&nbsp;</span> Video 7
+                        </a></li>
+
+                    <li><a href="/PPT/conflicts_power_point_with_dual_agency-edit2.ppt">&nbsp;
+                            <span class="fa fa-arrow-right">&nbsp;</span> Video 8
+                        </a></li>
+
+                    <li><a href="/PPT/Mass_Professionalism_Course.pptx">
+                            <span class="fa fa-arrow-right">&nbsp;</span> Video 9
+                        </a></li>
+
+                    <li><a href="/PPT/Mass_Professionalism_Course_part2.pptx">
+                            <span class="fa fa-arrow-right">&nbsp;</span> Video 10
+                        </a></li>
+
+                    <li><a href="/PPT/implementing_dual_agency_MASS__Autosaved_.pptx">
+                            <span class="fa fa-arrow-right">&nbsp;</span> Video 11
+                        </a></li>
+
+                    <li><a href="/PPT/implementing_dual_agency_MASS_pt2_Autosaved_.pptx">
+                            <span class="fa fa-arrow-right">&nbsp;</span> Video 12
+                        </a></li>
+                </ul>
+            </li>
+
 
         </ul>
 
