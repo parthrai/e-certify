@@ -35,6 +35,9 @@
 
     <!-- If you're using Stripe for payments -->
 
+    <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
+
+
 
 
     <script>

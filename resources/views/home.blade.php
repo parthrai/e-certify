@@ -556,13 +556,13 @@
 
 
 
-
+                        <div class="embed-responsive embed-responsive-16by9">
 
                         <video id="my-video"
-                               class="video-js"
+                               class="video-js "
                                controls
 
-                               width="640" height="360"
+
 
 
 
@@ -573,6 +573,8 @@
                             <source src="{{request()->getSchemeAndHttpHost()}}/videos/1.mp4" type='video/mp4'>
 
                         </video>
+
+                        </div>
                         <input type="hidden" id="user_id" value="{{Auth::user()->id}}">
 
 
@@ -595,7 +597,7 @@
                     </div>
 
                     <div class="panel">
-                        <table class="table">
+                        <table class="table table-responsive">
                             <thead>
                             <tr>
                                 <th>Module</th>
