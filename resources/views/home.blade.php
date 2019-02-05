@@ -563,6 +563,8 @@
                                class="video-js "
                                controls
 
+                              style="width: 50vw; height: 300px;"
+
 
 
 
