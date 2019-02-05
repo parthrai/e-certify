@@ -562,6 +562,8 @@
                                class="video-js"
                                controls
 
+                               width="640" height="360"
+
 
 
 
