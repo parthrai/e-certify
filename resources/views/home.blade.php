@@ -555,12 +555,15 @@
 
 
 
+                        <div class="videocontent">
 
-                        <div class="embed-responsive embed-responsive-16by9">
+
 
                         <video id="my-video"
                                class="video-js "
                                controls
+
+
 
 
 
@@ -599,42 +602,42 @@
                     <div class="panel">
                         <table class="table table-responsive">
                             <thead>
-                            <tr>
+                            <tr class="d-flex">
                                 <th>Module</th>
                                 <th>Part I</th>
                                 <th>Part II</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr class="success">
+                            <tr class="success d-flex">
                                 <td>Broker Responsibility in a Nutshell</td>
-                                <td><i class="{{$videoStatus->vid1  ? 'glyphicon glyphicon-ok' : ''}}" ></i> <a class="" href="/home/video/1">Part 1</a></td>
-                                <td><i class="{{$videoStatus->vid2  ? 'glyphicon glyphicon-ok' : ''}}" ></i> <a class="" href="/home/video/2">Part 2</a></td>
+                                <td><i class="{{$videoStatus->vid1  ? 'glyphicon glyphicon-ok' : ''}}" ></i> <a class="" href="/home/video/1"> I</a></td>
+                                <td><i class="{{$videoStatus->vid2  ? 'glyphicon glyphicon-ok' : ''}}" ></i> <a class="" href="/home/video/2"> II</a></td>
                             </tr>
-                            <tr class="info">
+                            <tr class="info d-flex">
                                 <td>Disclose, Disclose, Disclose</td>
-                                <td><i class="{{$videoStatus->vid3  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/3">Part 1</a></td>
-                                <td><i class="{{$videoStatus->vid4  ? 'glyphicon glyphicon-ok' : ''}}" ></i> <a class="" href="/home/video/4">Part 2</a></td>
+                                <td><i class="{{$videoStatus->vid3  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/3"> I</a></td>
+                                <td><i class="{{$videoStatus->vid4  ? 'glyphicon glyphicon-ok' : ''}}" ></i> <a class="" href="/home/video/4"> II</a></td>
                             </tr>
-                            <tr class="success">
+                            <tr class="success d-flex">
                                 <td>Advertising Compliance</td>
-                                <td><i class="{{$videoStatus->vid5  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/5">Part 1</a> </td>
-                                <td><i class="{{$videoStatus->vid6  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/6">Part 2</a> </td>
+                                <td><i class="{{$videoStatus->vid5  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/5"> I</a> </td>
+                                <td><i class="{{$videoStatus->vid6  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/6"> II</a> </td>
                             </tr>
-                            <tr class="info">
+                            <tr class="info d-flex">
                                 <td>Conflicts of Interest</td>
-                                <td><i class="{{$videoStatus->vid7  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/7">Part 1</a> </td>
-                                <td><i class="{{$videoStatus->vid8  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a  class="" href="/home/video/8">Part 2</a> </td>
+                                <td><i class="{{$videoStatus->vid7  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/7"> I</a> </td>
+                                <td><i class="{{$videoStatus->vid8  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a  class="" href="/home/video/8"> II</a> </td>
                             </tr>
-                            <tr class="success">
+                            <tr class="success d-flex">
                                 <td>Professional Ethics</td>
-                                <td><i class="{{$videoStatus->vid9  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/9">Part 1</a> </td>
-                                <td><i class="{{$videoStatus->vid10  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/10">Part 2</a> </td>
+                                <td><i class="{{$videoStatus->vid9  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/9"> I</a> </td>
+                                <td><i class="{{$videoStatus->vid10  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/10"> II</a> </td>
                             </tr>
-                            <tr class="info">
+                            <tr class="info d-flex">
                                 <td>Dual Agency</td>
-                                <td><i class="{{$videoStatus->vid11  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/11">Part 1</a> </td>
-                                <td><i class="{{$videoStatus->vid12  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/12">Part 2</a> </td>
+                                <td><i class="{{$videoStatus->vid11  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/11"> I</a> </td>
+                                <td><i class="{{$videoStatus->vid12  ? 'glyphicon glyphicon-ok' : ''}}" ></i><a class="" href="/home/video/12"> II</a> </td>
                             </tr>
 
                             </tbody>
