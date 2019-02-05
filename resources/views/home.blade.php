@@ -563,7 +563,7 @@
                                class="video-js "
                                controls
 
-                              style="width: 55vw; height:360px"
+                              style="width: 55vw; height:250px"
 
 
 
