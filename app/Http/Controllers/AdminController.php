@@ -195,12 +195,18 @@ class AdminController extends Controller
         foreach($getUsers as $r){
 
             $completion_date = User::where('email',$r->email)->first();
-           
 
-            if(isset($completion_date->completion_date))
+
+            if(isset($completion_date->completion_date)){
                 $expiration_date= date('Y-m-d', strtotime($completion_date->completion_date. ' + 180 days'));
-            else
+                $completion_date= $completion_date->completion_date;
+
+            }
+            else{
                 $expiration_date = "N/a";
+                $completion_date = "N/a";
+            }
+
 
             $dataArray[]=array(
                 'Full Name'=>$r->name,
@@ -208,7 +214,7 @@ class AdminController extends Controller
                 'Phone #'=>$r->phone,
                 'RE License #'=>$r->license,
                 'Date Of Registration'=>$r->created_at,
-                'Date of Completion' => $completion_date->completion_date,
+                'Date of Completion' => $completion_date,
                 'Expiration Date' => $expiration_date,
 
 
