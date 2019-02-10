@@ -606,8 +606,8 @@
                             $heading=VideoNames($video);
                             ?>
                             <div class="panel">
-                                <div class="panel-body">
-                                 <h3>{{$heading}}</h3>
+                                <div class="panel">
+                                 <h3>&nbsp;&nbsp;{{$heading}}</h3>
                                 </div>
                             </div>
 
