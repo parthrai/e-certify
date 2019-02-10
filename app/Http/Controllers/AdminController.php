@@ -195,7 +195,7 @@ class AdminController extends Controller
         foreach($getUsers as $r){
 
             $completion_date = User::where('email',$r->email)->first();
-            $expiration_date= date('Y-m-d', strtotime($completion_date->completion_Date. ' + 180 days'));
+            $expiration_date= date('Y-m-d', strtotime($completion_date->completion_date. ' + 180 days'));
 
             $dataArray[]=array(
                 'Full Name'=>$r->name,
