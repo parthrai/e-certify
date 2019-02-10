@@ -562,7 +562,7 @@
                         <video id="my-video"
                                class="video-js "
                                controls
-
+                               width="640" height="360"
 
 
 
