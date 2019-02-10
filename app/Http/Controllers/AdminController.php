@@ -189,10 +189,13 @@ class AdminController extends Controller
         $getUsers=User::where('is_admin',false)->get();
         $getUsers= Alluser::all();
 
-        $dataArray[]=['Full Name','Email','Phone #','RE License #','Date Of Registration','Date of Completion'];
+        $dataArray[]=['Full Name','Email','Phone #','RE License #','Date Of Registration','Date of Completion','Expiration Date'];
 
 
         foreach($getUsers as $r){
+
+            $completion_date = User::where('email',$r->email)->first();
+            $expiration_date= date('Y-m-d', strtotime($completion_date->completion_Date. ' + 180 days'));
 
             $dataArray[]=array(
                 'Full Name'=>$r->name,
@@ -200,7 +203,8 @@ class AdminController extends Controller
                 'Phone #'=>$r->phone,
                 'RE License #'=>$r->license,
                 'Date Of Registration'=>$r->created_at,
-                'Date of Completion' => $r->completion_date
+                'Date of Completion' => $completion_date->completion_date,
+                'Expiration Date' => $expiration_date,
 
 
             );

@@ -13,6 +13,7 @@
                             <input type="text" class="form-control" v-model="search" placeholder="Search">
                         </div>
                         <table class="table">
+
                             <thead>
                             <tr>
                                 <th class="text-center">#</th>
@@ -22,7 +23,7 @@
                                 <th>Phone </th>
 
                                 <th @click="sort('email')">license </th>
-                                <th>Registration Date </th>
+                                <th @click="sort('created_at_human')">Registration Date </th>
                                 <th>Registered </th>
                                 <th>Completion </th>
 
@@ -120,7 +121,7 @@
                 if(a[this.currentSort] > b[this.currentSort]) return 1 * modifier;
                 return 0;
             }).filter((row, index) => {
-                    let start = (this.currentPage-1)*this.pageSize;
+                let start = (this.currentPage-1)*this.pageSize;
                 let end = this.currentPage*this.pageSize;
                 if(index >= start && index < end) return true;
             });
@@ -130,8 +131,9 @@
                 return this.users.filter((data) => {
                     let email = data.email.toLowerCase().match(this.search.toLowerCase());
                     let name = data.name.toLowerCase().match(this.search.toLowerCase());
+                    let date = data.created_at_human.toLowerCase().match(this.search.toLowerCase());
 
-                return email || name ;
+                return email || name || date ;
             }).filter((row, index) => {
                     let start = (this.currentPage-1)*this.pageSize;
                 let end = this.currentPage*this.pageSize;

@@ -2162,6 +2162,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2199,7 +2200,8 @@ __webpack_require__.r(__webpack_exports__);
       return this.users.filter(function (data) {
         var email = data.email.toLowerCase().match(_this2.search.toLowerCase());
         var name = data.name.toLowerCase().match(_this2.search.toLowerCase());
-        return email || name;
+        var date = data.created_at_human.toLowerCase().match(_this2.search.toLowerCase());
+        return email || name || date;
       }).filter(function (row, index) {
         var start = (_this2.currentPage - 1) * _this2.pageSize;
         var end = _this2.currentPage * _this2.pageSize;
@@ -39309,7 +39311,17 @@ var render = function() {
                           [_vm._v("license ")]
                         ),
                         _vm._v(" "),
-                        _c("th", [_vm._v("Registration Date ")]),
+                        _c(
+                          "th",
+                          {
+                            on: {
+                              click: function($event) {
+                                _vm.sort("created_at_human")
+                              }
+                            }
+                          },
+                          [_vm._v("Registration Date ")]
+                        ),
                         _vm._v(" "),
                         _c("th", [_vm._v("Registered ")]),
                         _vm._v(" "),
