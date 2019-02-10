@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f08f739c-7c63-44de-94f7-52c0228441d5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/admin/users.vue" afterPath="$PROJECT_DIR$/resources/js/components/admin/users.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,25 +59,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="users.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/js/components/admin/users.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="25" column="66" lean-forward="false" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
+            <state relative-caret-position="85">
+              <caret line="101" column="34" lean-forward="false" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
               <folding>
-                <element signature="e#6037#6145#0" expanded="false" />
-                <element signature="e#6179#6255#0" expanded="false" />
-                <element signature="e#6282#6480#0" expanded="false" />
-                <element signature="e#6516#7070#0" expanded="false" />
-                <element signature="e#7105#7655#0" expanded="false" />
-                <element signature="e#7691#7755#0" expanded="false" />
-                <element signature="e#7791#8339#0" expanded="false" />
+                <element signature="e#6075#6183#0" expanded="false" />
+                <element signature="e#6217#6293#0" expanded="false" />
+                <element signature="e#6320#6518#0" expanded="false" />
+                <element signature="e#6554#7108#0" expanded="false" />
+                <element signature="e#7143#7693#0" expanded="false" />
+                <element signature="e#7729#7793#0" expanded="false" />
+                <element signature="e#7829#8377#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="499">
@@ -313,8 +314,8 @@
         <option value="$PROJECT_DIR$/resources/views/admin/userPage.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/users/stripe.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
-        <option value="$PROJECT_DIR$/resources/js/components/admin/users.vue" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/admin/users.vue" />
       </list>
     </option>
   </component>
@@ -556,12 +557,12 @@
       <workItem from="1549379159751" duration="1654000" />
       <workItem from="1549381875250" duration="7682000" />
       <workItem from="1549472781398" duration="14000" />
-      <workItem from="1549762344163" duration="2486000" />
+      <workItem from="1549762344163" duration="3809000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154268000" />
+    <option name="totallyTimeSpent" value="155591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -613,7 +614,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/resources/js/components/admin/users.vue</url>
-          <line>143</line>
+          <line>145</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -1051,22 +1052,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/admin/users.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="25" column="66" lean-forward="false" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
-          <folding>
-            <element signature="e#6037#6145#0" expanded="false" />
-            <element signature="e#6179#6255#0" expanded="false" />
-            <element signature="e#6282#6480#0" expanded="false" />
-            <element signature="e#6516#7070#0" expanded="false" />
-            <element signature="e#7105#7655#0" expanded="false" />
-            <element signature="e#7691#7755#0" expanded="false" />
-            <element signature="e#7791#8339#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="499">
@@ -1086,6 +1071,22 @@
             <element signature="e#5019#5327#0#PHP" expanded="false" />
             <element signature="e#5336#6212#0#PHP" expanded="false" />
             <element signature="e#6219#6444#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/admin/users.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="101" column="34" lean-forward="false" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
+          <folding>
+            <element signature="e#6075#6183#0" expanded="false" />
+            <element signature="e#6217#6293#0" expanded="false" />
+            <element signature="e#6320#6518#0" expanded="false" />
+            <element signature="e#6554#7108#0" expanded="false" />
+            <element signature="e#7143#7693#0" expanded="false" />
+            <element signature="e#7729#7793#0" expanded="false" />
+            <element signature="e#7829#8377#0" expanded="false" />
           </folding>
         </state>
       </provider>

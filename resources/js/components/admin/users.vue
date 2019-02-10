@@ -98,8 +98,8 @@
 
             return{
                 users:[],
-                currentSort:'name',
-                currentSortDir:'asc',
+                currentSort:'id',
+                currentSortDir:'desc',
                 search: '',
                 searchSelection: '',
                 pageSize: 50,
@@ -132,6 +132,8 @@
                     let email = data.email.toLowerCase().match(this.search.toLowerCase());
                     let name = data.name.toLowerCase().match(this.search.toLowerCase());
                     let date = data.created_at_human.toLowerCase().match(this.search.toLowerCase());
+                    let id = data.id;
+
 
                 return email || name || date ;
             }).filter((row, index) => {

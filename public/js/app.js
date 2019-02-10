@@ -2167,8 +2167,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       users: [],
-      currentSort: 'name',
-      currentSortDir: 'asc',
+      currentSort: 'id',
+      currentSortDir: 'desc',
       search: '',
       searchSelection: '',
       pageSize: 50,
@@ -2201,6 +2201,7 @@ __webpack_require__.r(__webpack_exports__);
         var email = data.email.toLowerCase().match(_this2.search.toLowerCase());
         var name = data.name.toLowerCase().match(_this2.search.toLowerCase());
         var date = data.created_at_human.toLowerCase().match(_this2.search.toLowerCase());
+        var id = data.id;
         return email || name || date;
       }).filter(function (row, index) {
         var start = (_this2.currentPage - 1) * _this2.pageSize;
@@ -53076,8 +53077,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\parths\Desktop\ot\work\e-certify\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\parths\Desktop\ot\work\e-certify\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\parths\DEsktop\ot\work\e-certify\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\parths\DEsktop\ot\work\e-certify\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
