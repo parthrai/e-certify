@@ -555,7 +555,7 @@
 
 
 
-                        <div class="videocontent">
+                        <div class="videocontent col-md-2 col-md-offset-2">
 
 
 
@@ -594,11 +594,24 @@
                         <br>
 
 
-                        <?php
-                        $heading=VideoNames($video);
-                        ?>
-                        <h3>{{$heading}}</h3>
 
+
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <?php
+                            $heading=VideoNames($video);
+                            ?>
+                            <div class="panel">
+                                <div class="panel-body">
+                                 <h3>{{$heading}}</h3>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
                     <div class="panel">
