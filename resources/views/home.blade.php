@@ -551,18 +551,18 @@
 
                     <div class="panel col-md-offset-1">
 
-                        <br>
 
 
 
-                        <div class="videocontent col-md-4 col-md-offset-1">
+
+                        <div class="videocontent col-md-2 col-md-offset-2">
 
 
 
                         <video id="my-video"
                                class="video-js "
                                controls
-                               width="640" height="360"
+
 
 
 
@@ -607,7 +607,7 @@
                             ?>
                             <div class="panel">
                                 <div class="panel">
-                                 <h3>&nbsp;&nbsp;{{$heading}}</h3>
+                                 <h3> &nbsp;&nbsp; {{$heading}}</h3>
                                 </div>
                             </div>
 
