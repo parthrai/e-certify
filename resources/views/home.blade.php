@@ -476,7 +476,7 @@
 
             <li role="presentation" class="divider"></li>
             <li class="parent "><a data-toggle="collapse" href="#sub-item-1" class="collapsed" aria-expanded="false">
-                    <em class="fa fa-navicon">&nbsp;</em> Download Course PPTs <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right collapsed" aria-expanded="false"><em class="fa fa-plus"></em></span>
+                    <em class="fa fa-navicon">&nbsp;</em> Download Course Presentations <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right collapsed" aria-expanded="false"><em class="fa fa-plus"></em></span>
                 </a>
                 <ul class="children collapse" id="sub-item-1" aria-expanded="false" style="height: 0px;">
                     <li><a href="/PPT/Understanding_Procuring_Cause.ppt" class="">
