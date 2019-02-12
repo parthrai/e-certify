@@ -50,9 +50,26 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/store.js/1.3.17/store.min.js"></script>
 
         <style>
-            .responsive-video {
-                max-width: 100%;
-                height: auto;
+
+
+            .video-js-responsive-container.vjs-hd {
+                padding-top: 300px;
+
+            }
+            .video-js-responsive-container.vjs-sd {
+                padding-top: 75%;
+            }
+            .video-js-responsive-container {
+                width: 100%;
+                position: relative;
+
+            }
+            .video-js-responsive-container .video-js {
+                height: 60% !important;
+                width: 70% !important;
+                position: absolute;
+                top: 0;
+                left: 0;
             }
         </style>
 
@@ -551,68 +568,46 @@
 
                     <div class="panel col-md-offset-1">
 
-
                         <br>
+                        <div class="video-js-responsive-container vjs-hd">
 
 
-                        <div class="videocontent col-md-2 col-md-offset-2">
+                            <video id="my-video"
+                                   class="video-js vjs-default-skin "
+                                   controls
+
+                            >
+
+                                <source src="{{request()->getSchemeAndHttpHost()}}/videos/1.mp4" type='video/mp4'>
 
 
+                            </video>
 
-                        <video id="my-video"
-                               class="video-js "
-                               controls
+                            <div class="row">
+                                <div class="col-md-12">
 
+                                    <?php
+                                    $heading=VideoNames($video);
+                                    ?>
+                                    <div class="container">
+                                        <div class="container">
+                                            <h3> &nbsp;&nbsp; {{$heading}}</h3>
+                                        </div>
+                                    </div>
 
-
-
-
-
-
-
-
-
-
-                        >
-
-                            <source src="{{request()->getSchemeAndHttpHost()}}/videos/1.mp4" type='video/mp4'>
-
-                        </video>
-
-                        </div>
-                        <input type="hidden" id="user_id" value="{{Auth::user()->id}}">
-
-
-
-
-
-
-
-
-
-
-                        <br>
-
-
-
-
-
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12">
-
-                            <?php
-                            $heading=VideoNames($video);
-                            ?>
-                            <div class="panel">
-                                <div class="panel">
-                                 <h3> &nbsp;&nbsp; {{$heading}}</h3>
                                 </div>
                             </div>
 
+
                         </div>
-                    </div>
+                            <input type="hidden" id="user_id" value="{{Auth::user()->id}}">
+
+
+
+
+                        </div>
+
+
 
                     <div class="panel">
                         <table class="table table-responsive">
