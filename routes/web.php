@@ -66,5 +66,6 @@ Route::get('/admin/user/{id}','AdminController@userInfo');
 Route::get('/admin/user/{user_id}/video/{video_id}','AdminController@skipVideo');
 
 
+Route::get('/test','UserController@test');
 
 

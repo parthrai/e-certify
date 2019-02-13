@@ -138,6 +138,9 @@ class UserController extends Controller
 
 
     public function createCertificate($license){
+
+        $host = request()->getHttpHost();
+
         $today= date('Y-m-d');
 
         $user_email=\Auth::user()->email;
@@ -170,7 +173,7 @@ class UserController extends Controller
             header('Content-type: image/jpeg');
 
 
-            $jpg_image = imagecreatefromjpeg('https://e-certify.bhmlabs.ca/images/certi/certificate.jpg');
+            $jpg_image = imagecreatefromjpeg('https://'.$host .'/images/certi/certificate.jpg');
 
 
             $color = imagecolorallocate($jpg_image, 10, 10, 10);
@@ -188,7 +191,7 @@ class UserController extends Controller
             $text = "This is a sunset!";
             $fontSize = 8;
 
-            imagettftext($jpg_image, 18, 0, 668, 280, $color, $font_path, $name);
+            imagettftext($jpg_image, 18, 0, 553, 294, $color, $font_path, $name);
 
             imagettftext($jpg_image, 18, 0, 669, 538, $color, $font_path, date("F jS Y", strtotime($today)));
             //imagettftext($jpg_image, 18, 0, 589, 442, $color, $font_path, $license);
@@ -209,5 +212,12 @@ class UserController extends Controller
 
 
 
+    }
+
+
+    public function test(){
+        $host = request()->getHttpHost();
+
+        return $host;
     }
 }
