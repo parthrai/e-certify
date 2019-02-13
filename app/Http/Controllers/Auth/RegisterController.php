@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\VideoData;
 use App\VideoStatus;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -23,6 +24,8 @@ class RegisterController extends Controller
     | provide this functionality without requiring any additional code.
     |
     */
+
+
 
     use RegistersUsers;
 
@@ -92,6 +95,27 @@ class RegisterController extends Controller
 
             'phone' => $data['phone'],
         ]);
+
+
+
+        Mail::send('emails/adminnotification', ['userEmail'=>$data['email'] , 'userName'=>$data['name'], 'phone'=>$data['phone']], function ($message) {
+            //
+            $message->from('support@ecertifyeducation.com', 'E-Certify Education');
+            $message->to('timandrovett@gmail.com', 'Tim Androvett')->subject('New User Notification');
+
+
+        });
+
+        $user_Email=$data['email'];
+
+        Mail::send('emails/userwelcome', ['userName'=>$data['name'] , 'userName'=>$data['name']], function ($message) use ($user_Email) {
+            //
+            $message->from('support@ecertifyeducation.com', 'E-Certify Education');
+            $message->to($user_Email, 'E-Certify Education')->subject('Welcome!');
+
+
+        });
+
 
         return $user;
 
