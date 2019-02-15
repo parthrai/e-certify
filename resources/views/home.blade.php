@@ -290,7 +290,8 @@
                     <div class="form-group">
                         <div class="col-sm-10 col-sm-offset-2">
 
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            <a href="/images/certi/{{Auth::user()->id}}.jpg" target="_blank" class="btn btn-primary" >Download</a>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
