@@ -200,7 +200,7 @@
                     <h4 class="modal-title" id="myModalLabel">Contact Support</h4>
                 </div>
                 <div class="modal-body">
-                    <form class="form-horizontal" role="form" method="post" action="/contactsupport">
+                    <form class="form-horizontal" role="form" method="post" action="/user/contactSupport">
                         <input type="hidden" name="_token" value="<?= csrf_token();?>">
 
 

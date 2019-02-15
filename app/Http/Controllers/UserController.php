@@ -8,6 +8,7 @@ use App\VideoStatus;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use League\Flysystem\Config;
 use function MongoDB\BSON\toJSON;
 use Stripe\Stripe;
@@ -43,7 +44,24 @@ class UserController extends Controller
         $user->save();
 
 
+        $data=array(
+            'user_id'=>Auth::user()->id,
+            'name'=>Auth::user()->name,
+            'email'=>Auth::user()->email,
+            'phone'=>Auth::user()->Phone,
 
+
+        );
+
+
+
+        Mail::send('emails/receipt', $data, function ($message) {
+            //
+            $message->from('support@ecertifyeducation.com', 'E-Certify Education');
+            $message->to(Auth::user()->email, Auth::user()->name)->subject('Payment Receipt');
+
+
+        });
 
 
         return redirect()->back()->withFlashMessage('Account Activated');
@@ -206,6 +224,17 @@ class UserController extends Controller
 
 
         }
+
+
+
+
+        Mail::send('emails/attachedEmail', $data, function ($message) {
+            //
+            $message->from('support@ecertifyeducation.com', 'E-Certify Education');
+            $message->to(Auth::user()->email, Auth::user()->name)->subject('Course Completion Certification');
+
+            $message->attach('images/certi/' . Auth::user()->id . '.jpg');
+        });
 
 
 
