@@ -150,7 +150,7 @@
         else
             $amount=2900 - $_COOKIE['discount']*100;
         $code=$_COOKIE['code'];
-    }
+        }
 
     else
         $amount=2900;

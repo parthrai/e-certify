@@ -37,7 +37,27 @@
 
     <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
 
-
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #17a2b8;
+        height: 100vh;
+    }
+    #login .container #login-row #login-column #login-box {
+        margin-top: 120px;
+        max-width: 600px;
+        height: 320px;
+        border: 1px solid #9C9C9C;
+        background-color: #EAEAEA;
+    }
+    #login .container #login-row #login-column #login-box #login-form {
+        padding: 20px;
+    }
+    #login .container #login-row #login-column #login-box #login-form #register-link {
+        margin-top: -85px;
+    }
+</style>
 
 
     <script>
@@ -136,139 +156,172 @@
 
 
 </head>
-
 <body>
+<div id="login">
 
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal_container">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class=".col-sm-12 modal-header">
+    <div class="container">
 
 
-                    <h4 class=".col-sm-8 text-left modal-title">ACTIVATE YOUR ACCOUNT</h4>
-                    <div class=".col-sm-4 text-right"><a class="fa fa-btn fa-sign-out" href="/logout">Logout</a></div>
+        <br><br>
+
+        <div class="col-xs-12 col-md-6 col-md-offset-3">
 
 
+            <!-- CREDIT CARD FORM STARTS HERE -->
+            <div class="panel panel-default credit-card-box">
+                <div class="panel-heading display-table" >
+                    <div class="row display-tr" >
 
-                </div>
-                <div class="modal-body">
-                    <form action="/user/pay" method="POST" id="payment-form" class="checkout">
-                        {{csrf_field()}}
-                        <span class="payment-errors"></span>
-                        <div class="checkout-header">
-                            <h1 class="checkout-title">
-                                <i class="fa fa-lock"> </i>&nbsp;&nbsp;    SECURE PAYMENT
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6">
+                                <h2 > Payment Details</h2>
+                            </div>
 
-                            </h1>
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="display-td" >
+                                    <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                                </div>
+                            </div>
                         </div>
 
-                        <p>
-                            <input type="text" class="checkout-input checkout-card" size="20" data-stripe="number" placeholder="Card Number">
 
-                        </p>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form action="/user/pay" method="POST" role="form" id="payment-form">
+                        {{csrf_field()}}
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="cardNumber">CARD NUMBER</label>
+                                    <div class="input-group">
+                                        <input
+                                                type="tel"
 
-                        <p>
-                            <input type="text" class="checkout-input checkout-exp"  size="2"  data-stripe="exp_month" placeholder="MM">
-                            <input type="text" class="checkout-input checkout-exp" size="2" data-stripe="exp_year" placeholder="YY">
-                            <input type="text" class="checkout-input checkout-cvc" placeholder="CVC" size="4" data-stripe="cvc" >
-                        </p>
-                        <p>
+                                                name="cardNumber"
+                                                placeholder="Valid Card Number"
+                                                autocomplete="cc-number"
+                                                class="form-control checkout-input checkout-card" size="20" data-stripe="number"
+                                                required autofocus
+                                        />
+                                        <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 col-md-4">
+                                <div class="form-group">
+                                    <label for="cardExpiry"><span class="hidden-xs">MM</span><span class="visible-xs-inline"></span> </label>
+                                    <input
+                                            type="tel"
+                                            class="form-control"
+                                            name="cardExpiry"
+                                            placeholder="MM"
+                                            autocomplete="cc-exp"
+                                            data-stripe="exp_month"
+                                            required
+                                    />
+                                </div>
+                            </div>
 
-                            @if(isset($_COOKIE['discount']) && isset($_COOKIE['code']))
+
+                            <div class="col-xs-4 col-md-4">
+                                <div class="form-group">
+                                    <label for="cardExpiry"><span class="hidden-xs">YY</span><span class="visible-xs-inline"></span> </label>
+                                    <input
+                                            type="tel"
+                                            class="form-control"
+                                            name="cardExpiry"
+                                            placeholder="YY"
+                                            autocomplete="cc-exp"
+                                            data-stripe="exp_year"
+                                            required
+                                    />
+                                </div>
+                            </div>
 
 
-                                @if($code=='undefined')
-                                    <input type="text" class="checkout-input checkout-name" size="11"  id="discountcoupon" name="coupon" value="Invalid Code" disabled>
-                                @else
-                                    <input type="text" class="checkout-input checkout-name" size="11" id="discountcoupon" name="coupon" value="{{$code}}" disabled>
-                                @endif
-                                &nbsp;&nbsp;<a href="#" onclick="unapply()" class="btn btn-primary btn-xs"> Remove</a>
-                            @else
+                            <div class="col-xs-4 col-md-4 pull-right">
+                                <div class="form-group">
+                                    <label for="cardCVC">CVV CODE</label>
+                                    <input
+                                            type="tel"
+
+                                            name="cardCVC"
+                                            placeholder="CVC"
 
 
-                                <input type="text" id="discountcoupon" class="checkout-input checkout-card" name="coupon" placeholder="Referral Code (Optional)">
-                                &nbsp;&nbsp;<a href="#" onclick="apply()" class="btn btn-primary btn-xs"> Apply</a>
-                            @endif
+                                            class="form-control checkout-input checkout-cvc" placeholder="CVC" size="4" data-stripe="cvc"
+                                            required
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="couponCode">COUPON CODE</label>
 
-                        </p>
+                                    <p>
+
+                                        @if(isset($_COOKIE['discount']) && isset($_COOKIE['code']))
 
 
-                        <p>
-                            <input type="submit" class="submit btn btn-primary btn-md" value="Pay ${{$amount/100}}">                            </p>
+                                            @if($code=='undefined')
+                                                <input type="text" class="form-control checkout-input checkout-name" name="coupon" size="11" id="discountcoupon" value="Invalid Code" disabled />
 
-                        </p>
+                                            @else
+                                                <input type="text" class="form-control checkout-input checkout-name" size="11" id="discountcoupon" name="coupon" value="{{$code}}" disabled>
+                                            @endif
+                                            &nbsp;&nbsp;<a href="#" onclick="unapply()" class="btn btn-primary btn-xs"> Remove</a>
+                                        @else
+
+
+                                            <input type="text" id="discountcoupon" class="checkout-input checkout-card" name="coupon" placeholder="Referral Code (Optional)">
+                                            &nbsp;&nbsp;<a href="#" onclick="apply()" class="btn btn-primary btn-xs"> Apply</a>
+                                        @endif
+
+                                    </p>
+
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
 
 
                         <input type="hidden" name="amount" value="{{$amount}}">
 
 
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button class="btn btn-success btn-lg btn-block" type="submit"  value="Pay ${{$amount/100}}">Pay ${{$amount/100}}</button>
+                            </div>
+                        </div>
+                        <div class="row" style="display:none;">
+                            <div class="col-xs-12">
+                                <p class="payment-errors"></p>
+                            </div>
+                        </div>
                     </form>
-
-
-
-
-                </div>
-
-                <div class="modal-footer">
-
                 </div>
             </div>
+            <!-- CREDIT CARD FORM ENDS HERE -->
+
+
+
+
         </div>
     </div>
 </div>
-
-<style>
-    .container {
-        -webkit-filter: blur(6px) grayscale(80%);
-    }
-
-</style>
-<script>
-
-    $(document).ready(function(){
-
-
-
-        $("#myModal").modal({
-            backdrop: 'static',
-            keyboard: false
-        });
-
-
-
-    });
-
-
-</script>
-
-<div class="container" id="app">
-    <div class="row ustify-content-center">
-        <!-- You can make it whatever width you want. I'm making it full width
-             on <= small devices and 4/12 page width on >= medium devices -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-</div>
-
 </body>
+
+
 </html>
