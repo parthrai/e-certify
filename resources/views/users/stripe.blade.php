@@ -136,13 +136,22 @@
 </head>
 <body>
 <div class="container" id="container" style="display:none;">
-    
+
     <section id="form" class="animated fadeInDown">
         <div class="container">
             <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                 <div class="panel white-alpha-90" >
                     <div class="panel-heading">
-                        <div class="panel-title text-center"><span class="text-primary">Payment</span></div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-xs-6">
+                                <div class="panel-title text-center"><h2><span class="text-primary">Payment</span></h2></div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-xs-6 text-right">
+                                <a href="/logout" class="btn btn-danger">Logout</a>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="panel-body" >
                         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
