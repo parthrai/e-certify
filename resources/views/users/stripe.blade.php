@@ -1,63 +1,35 @@
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-Certify Education: School of Real Estate</title>
 
-    <!--
-    The MIT License (MIT)
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    Copyright (c) 2015 William Hilton
+    <!-- Bootstrap -->
+    <script src="js/pace.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:700,400|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in
-    all copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-    THE SOFTWARE.
-    -->
-    <!-- Vendor libraries -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/1.2.3/jquery.payment.min.js"></script>
 
     <!-- If you're using Stripe for payments -->
 
-    <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: #17a2b8;
-        height: 100vh;
-    }
-    #login .container #login-row #login-column #login-box {
-        margin-top: 120px;
-        max-width: 600px;
-        height: 320px;
-        border: 1px solid #9C9C9C;
-        background-color: #EAEAEA;
-    }
-    #login .container #login-row #login-column #login-box #login-form {
-        padding: 20px;
-    }
-    #login .container #login-row #login-column #login-box #login-form #register-link {
-        margin-top: -85px;
-    }
-</style>
+    <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
 
 
     <script>
@@ -152,99 +124,98 @@
     ?>
 
 
-
-
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #17a2b8;
+            height: 100vh;
+        }
+    </style>
 
 </head>
 <body>
-<div id="login">
-
-    <div class="container">
-
-
-        <br><br>
-
-        <div class="col-xs-12 col-md-6 col-md-offset-3">
-
-
-            <!-- CREDIT CARD FORM STARTS HERE -->
-            <div class="panel panel-default credit-card-box">
-                <div class="panel-heading display-table" >
-                    <div class="row display-tr" >
-
-                        <div class="row">
-                            <div class="col-lg-6 col-sm-6">
-                                <h2 > Payment Details</h2>
-                            </div>
-
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="display-td" >
-                                    <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
-                                </div>
-                            </div>
-                        </div>
-
-
+<div class="container" id="container" style="display:none;">
+    
+    <section id="form" class="animated fadeInDown">
+        <div class="container">
+            <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <div class="panel white-alpha-90" >
+                    <div class="panel-heading">
+                        <div class="panel-title text-center"><span class="text-primary">Payment</span></div>
                     </div>
-                </div>
-                <div class="panel-body">
-                    <form action="/user/pay" method="POST" role="form" id="payment-form">
-                        {{csrf_field()}}
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="form-group">
-                                    <label for="cardNumber">CARD NUMBER</label>
-                                    <div class="input-group">
-                                        <input
-                                                type="tel"
+                    <div class="panel-body" >
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                        <form action="/user/pay" method="POST" role="form" id="payment-form">
+                            {{csrf_field()}}
 
-                                                name="cardNumber"
-                                                placeholder="Valid Card Number"
-                                                autocomplete="cc-number"
-                                                class="form-control checkout-input checkout-card" size="20" data-stripe="number"
-                                                required autofocus
-                                        />
-                                        <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+
+
+                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                <label class="col-md-4 control-label">Card Number</label>
+
+                                <div class="col-md-6">
+                                    <input
+                                            type="tel"
+
+                                            name="cardNumber"
+                                            placeholder="Valid Card Number"
+                                            autocomplete="cc-number"
+                                            class="form-control checkout-input checkout-card" size="20" data-stripe="number"
+                                            required autofocus
+                                    />
+
+
+
+                                </div>
+                            </div>
+                            <br><br>
+
+                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                <label class="col-md-4 control-label">Expiry</label>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input
+                                                    type="tel"
+                                                    class="form-control"
+                                                    name="cardExpiry"
+                                                    placeholder="MM"
+                                                    autocomplete="cc-exp"
+                                                    data-stripe="exp_month"
+                                                    required
+                                            />
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <input
+                                                    type="tel"
+                                                    class="form-control"
+                                                    name="cardExpiry"
+                                                    placeholder="YY"
+                                                    autocomplete="cc-exp"
+                                                    data-stripe="exp_year"
+                                                    required
+                                            />
+
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-4 col-md-4">
-                                <div class="form-group">
-                                    <label for="cardExpiry"><span class="hidden-xs">MM</span><span class="visible-xs-inline"></span> </label>
-                                    <input
-                                            type="tel"
-                                            class="form-control"
-                                            name="cardExpiry"
-                                            placeholder="MM"
-                                            autocomplete="cc-exp"
-                                            data-stripe="exp_month"
-                                            required
-                                    />
+
+
+
+
+
                                 </div>
                             </div>
 
 
-                            <div class="col-xs-4 col-md-4">
-                                <div class="form-group">
-                                    <label for="cardExpiry"><span class="hidden-xs">YY</span><span class="visible-xs-inline"></span> </label>
-                                    <input
-                                            type="tel"
-                                            class="form-control"
-                                            name="cardExpiry"
-                                            placeholder="YY"
-                                            autocomplete="cc-exp"
-                                            data-stripe="exp_year"
-                                            required
-                                    />
-                                </div>
-                            </div>
+                            <br><br>
 
+                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                <label class="col-md-4 control-label">CVV</label>
 
-                            <div class="col-xs-4 col-md-4 pull-right">
-                                <div class="form-group">
-                                    <label for="cardCVC">CVV CODE</label>
+                                <div class="col-md-6">
                                     <input
                                             type="tel"
 
@@ -255,73 +226,112 @@
                                             class="form-control checkout-input checkout-cvc" placeholder="CVC" size="4" data-stripe="cvc"
                                             required
                                     />
+
+
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="form-group">
-                                    <label for="couponCode">COUPON CODE</label>
-
-                                    <p>
-
-                                        @if(isset($_COOKIE['discount']) && isset($_COOKIE['code']))
 
 
-                                            @if($code=='undefined')
-                                                <input type="text" class="form-control checkout-input checkout-name" name="coupon" size="11" id="discountcoupon" value="Invalid Code" disabled />
+                            <br><br>
 
-                                            @else
-                                                <input type="text" class="form-control checkout-input checkout-name" size="11" id="discountcoupon" name="coupon" value="{{$code}}" disabled>
-                                            @endif
-                                            &nbsp;&nbsp;<a href="#" onclick="unapply()" class="btn btn-primary btn-xs"> Remove</a>
+                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                <label class="col-md-4 control-label">Coupon Code</label>
+
+                                <div class="col-md-6">
+                                    @if(isset($_COOKIE['discount']) && isset($_COOKIE['code']))
+
+
+                                        @if($code=='undefined')
+                                            <input type="text" class="form-control checkout-input checkout-name" name="coupon" size="11" id="discountcoupon" value="Invalid Code" disabled />
+
                                         @else
-
-
-                                            <input type="text" id="discountcoupon" class="checkout-input checkout-card" name="coupon" placeholder="Referral Code (Optional)">
-                                            &nbsp;&nbsp;<a href="#" onclick="apply()" class="btn btn-primary btn-xs"> Apply</a>
+                                            <input type="text" class="form-control checkout-input checkout-name" size="11" id="discountcoupon" name="coupon" value="{{$code}}" disabled>
                                         @endif
+                                        &nbsp;&nbsp;<a href="#" onclick="unapply()" class="btn btn-primary btn-xs"> Remove</a>
+                                    @else
 
-                                    </p>
 
-
-
+                                        <input type="text" id="discountcoupon" class="form-control checkout-input checkout-card" name="coupon" placeholder="Referral Code (Optional)">
+                                        &nbsp;&nbsp;<a href="#" onclick="apply()" class="btn btn-primary btn-xs"> Apply</a>
+                                    @endif
 
 
 
                                 </div>
                             </div>
-                        </div>
+
+
+
+                          <br><br>
 
 
 
 
 
-                        <input type="hidden" name="amount" value="{{$amount}}">
+                            <input type="hidden" name="amount" value="{{$amount}}">
 
 
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <button class="btn btn-success btn-lg btn-block" type="submit"  value="Pay ${{$amount/100}}">Pay ${{$amount/100}}</button>
+                            <div class="row">
+                                <br><br>
+                                <div class="col-xs-12">
+                                    <button class="btn btn-success btn-lg btn-block" type="submit"  value="Pay ${{$amount/100}}">Pay ${{$amount/100}}</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row" style="display:none;">
-                            <div class="col-xs-12">
-                                <p class="payment-errors"></p>
+                            <div class="row" style="display:none;">
+                                <div class="col-xs-12">
+                                    <p class="payment-errors"></p>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+
+
+
+
+                        </form>
+                    </div>
                 </div>
             </div>
-            <!-- CREDIT CARD FORM ENDS HERE -->
-
-
-
-
         </div>
-    </div>
+    </section>
+    <footer>
+
+    </footer>
 </div>
+
+
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+    Pace.on('hide', function(){
+        $("#container").fadeIn('10');
+        $.backstretch([
+            "images/login/login_bg_1.jpg",
+        ], {duration: 500, fade: 100});
+    });
+
+</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53918379-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>
 </body>
-
-
 </html>
+
+
+
+
+
+
+
