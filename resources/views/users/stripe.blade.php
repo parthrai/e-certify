@@ -128,7 +128,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #17a2b8;
+            background-color: #428bca;
             height: 100vh;
         }
     </style>
@@ -144,7 +144,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-xs-6">
-                                <div class="panel-title text-center"><h2><span class="text-primary">Payment</span></h2></div>
+                                <div class="panel-title text-center"><h2><span class="text-primary">Secure Payment</span></h2></div>
                             </div>
 
                             <div class="col-lg-6 col-md-6 col-xs-6 text-right">
@@ -244,7 +244,7 @@
                             <br><br>
 
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label class="col-md-4 control-label">Coupon Code</label>
+                                <label class="col-md-4 control-label">Promotion Code</label>
 
                                 <div class="col-md-6">
                                     @if(isset($_COOKIE['discount']) && isset($_COOKIE['code']))
@@ -260,7 +260,7 @@
                                     @else
 
 
-                                        <input type="text" id="discountcoupon" class="form-control checkout-input checkout-card" name="coupon" placeholder="Referral Code (Optional)">
+                                        <input type="text" id="discountcoupon" class="form-control checkout-input checkout-card" name="coupon" placeholder="">
                                         &nbsp;&nbsp;<a href="#" onclick="apply()" class="btn btn-primary btn-xs"> Apply</a>
                                     @endif
 
