@@ -8,13 +8,13 @@
     <title>E-Certify Education: School of Real Estate</title>
 
     <!-- Bootstrap -->
-    <script src="../js/pace.js"></script>
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link href="../css/theme.css" rel="stylesheet">
-    <link href="../css/font-awesome.css" rel="stylesheet">
-    <link href="../css/animate.css" rel="stylesheet">
+    <script src="{{asset('js/pace.js')}}"></script>
+    <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{asset('css/theme.css')}}" rel="stylesheet">
+    <link href="{{asset('css/font-awesome.css')}}" rel="stylesheet">
+    <link href="{{asset('css/animate.css')}}" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700,400|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-    <link href="../css/theme-loading-bar.css" rel="stylesheet" />
+    <link href="{{asset('css/theme-loading-bar.css')}}" rel="stylesheet" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -99,7 +99,7 @@
                             </div>
                         </form>
 
-                       
+
                     </div>
                 </div>
             </div>
@@ -116,16 +116,16 @@
     </footer>
 </div>
 
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/jquery.backstretch.min.js"></script>
+<script src="{{asset('js/jquery.min.js')}}"></script>
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/jquery.backstretch.min.js')}}"></script>
 
 <script>
     Pace.on('hide', function(){
         $("#container").fadeIn('1000');
         $.backstretch([
-            "../images/login/login_bg_1.jpg",
-            "../images/login/login_bg_2.jpg"
+            "{{asset('images/login/login_bg_1.jpg')}}",
+            "{{asset('images/login/login_bg_2.jpg')}}"
         ], {duration: 5000, fade: 1000});
     });
 
