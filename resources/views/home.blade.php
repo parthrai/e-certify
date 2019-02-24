@@ -281,7 +281,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Download Certificate</h4>
+                    <h4 class="modal-title" id="myModalLabel">View Certificate</h4>
+                    <h6>Certificate will be emailed to your email address .</h6>
                 </div>
                 <div class="modal-body">
                     <img src="/images/certi/{{Auth::user()->id}}.jpg" class="img-responsive" height="450" width="580">
@@ -486,9 +487,9 @@
                 <li><a href="#surveymodal" data-toggle="modal"><svg class="glyph stroked star"><use xlink:href="#stroked-star"></use></svg>Course Survey</a></li>
 
                 @if(Auth::user()->license==NULL  )
-                    <li><a href="#licenseModal" data-toggle="modal" class="wow pulse" data-wow-iteration="infinite" data-wow-duration="1000ms"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Download Certificate</a></li>
+                    <li><a href="#licenseModal" data-toggle="modal" class="wow pulse" data-wow-iteration="infinite" data-wow-duration="1000ms"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>View Certificate</a></li>
                 @else
-                    <li><a href="#certificatemodal" data-toggle="modal" class="wow pulse" data-wow-iteration="infinite" data-wow-duration="1000ms"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>Download Certificate</a></li>
+                    <li><a href="#certificatemodal" data-toggle="modal" class="wow pulse" data-wow-iteration="infinite" data-wow-duration="1000ms"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg>View Certificate</a></li>
                 @endif
             @endif
 
